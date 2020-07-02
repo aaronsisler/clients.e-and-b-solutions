@@ -3,7 +3,6 @@ service: e-and-b-solutions
 provider:
   name: aws
   runtime: nodejs8.10
-  profile: serverless
   stage: prod
   region: us-east-1
   environment:
