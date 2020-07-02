@@ -12,7 +12,7 @@ class MyApp extends App {
     return (
       <>
         <Head>
-          <title>E&amp;B Solutions</title>
+          <title>Valley Love Farm</title>
         </Head>
         <Navbar />
         <Component {...pageProps} />

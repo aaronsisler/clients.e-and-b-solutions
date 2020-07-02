@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "../../atoms/link";
+import Hyperlink from "../../atoms/hyperlink";
 
 import "./footer.scss";
 
@@ -9,10 +9,10 @@ const Footer = () => (
       Copyright &copy; {new Date().getFullYear()}
     </div>
     <div className="footer__links">
-      <Link
-        children="Privacy Policy"
+      <Hyperlink
         className="footer__link"
         href="/privacy-policy"
+        title="Privacy Policy"
       />
     </div>
   </footer>

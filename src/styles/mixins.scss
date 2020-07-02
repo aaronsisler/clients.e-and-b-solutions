@@ -1,41 +1,72 @@
 @import "./variables.scss";
 
-@mixin font-type($fontFamily: $mainFont, $fontSize: $medium, $fontWeight: 400) {
-  font-family: $fontFamily;
-  font-size: $fontSize;
+@mixin font-type(
+  $fontFamily: $MAIN_FONT,
+  $fontSize: $MEDIUM,
+  $fontWeight: 400
+) {
+  color: $FONT_GRAY;
   font-weight: $fontWeight;
+  font-size: $fontSize;
+  font-family: $fontFamily;
 }
 
 @mixin button() {
-  @include font-type($mainFont, $medium);
+  @include font-type($MAIN_FONT, $MEDIUM);
 
-  align-items: center;
-  background-color: $mainColor;
-  border-radius: $xsmall;
-  color: white;
-  cursor: pointer;
   display: grid;
-  min-height: $xlarge;
-  padding: $small $midlarge;
+  align-items: center;
+  min-height: $XLARGE;
+  padding: $SMALL $MIDLARGE;
+  color: white;
   text-align: center;
-  text-decoration: none;
   text-transform: uppercase;
+  text-decoration: none;
+  background-color: $MAIN_COLOR;
+  border-radius: $XSMALL;
+  cursor: pointer;
   &:hover {
-    background-color: $darkenMainColor;
-    background-color: $lightenMainColor;
+    background-color: $MAIN_COLOR_LIGHTEN;
     transition: background-color 0.5s ease-in-out;
   }
   &:disabled {
-    background: $mainColor;
-    cursor: not-allowed;
     color: white;
+    background: $MAIN_COLOR;
+    cursor: not-allowed;
     opacity: 0.5;
   }
 }
 
+@mixin CTA-link {
+  display: inline-block;
+  align-self: center;
+  margin: 0;
+  padding: $MEDIUM $MIDLARGE;
+  color: $MAIN_COLOR;
+  font-size: $MEDIUM;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: white;
+  border: 2px solid $MAIN_COLOR;
+  border-radius: $XXSMALL;
+  cursor: pointer;
+  &:hover {
+    color: white;
+    background: $MAIN_COLOR;
+    transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+  }
+  &:disabled {
+    color: white;
+    background: $MAIN_COLOR;
+    cursor: not-allowed;
+    opacity: 0.25;
+  }
+}
+
 @mixin textarea() {
-  border: $border;
+  padding: $SMALL $XSMALL;
+  font-size: $MEDIUM;
+  border: 1px solid $BORDER_GRAY;
   border-radius: 5px;
-  font-size: $medium;
-  padding: $small $xsmall;
 }
