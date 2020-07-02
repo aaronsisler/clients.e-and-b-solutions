@@ -3,13 +3,10 @@
 
 //Small screens - MOBILE
 @media only screen {
-  .form-error {
-    @include font-type($MAIN_FONT, $MEDIUM);
-
-    color: lighten(darkred, 15);
-    svg > path {
-      color: lighten(darkred, 15);
-    }
+  .image {
+    display: block;
+    width: 100%;
+    object-fit: scale-down;
   }
 }
 

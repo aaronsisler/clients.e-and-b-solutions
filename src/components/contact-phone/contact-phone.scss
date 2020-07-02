@@ -3,12 +3,11 @@
 
 //Small screens - MOBILE
 @media only screen {
-  .form-error {
-    @include font-type($MAIN_FONT, $MEDIUM);
+  .contact-phone {
+    h2 {
+      @include font-type($MAIN_FONT, $MIDLARGE, bold);
 
-    color: lighten(darkred, 15);
-    svg > path {
-      color: lighten(darkred, 15);
+      color: white;
     }
   }
 }

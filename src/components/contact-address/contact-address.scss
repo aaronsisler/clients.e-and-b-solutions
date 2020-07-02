@@ -3,12 +3,19 @@
 
 //Small screens - MOBILE
 @media only screen {
-  .form-error {
-    @include font-type($MAIN_FONT, $MEDIUM);
+  .contact-address {
+    p {
+      @include font-type($MAIN_FONT, $MIDLARGE);
 
-    color: lighten(darkred, 15);
-    svg > path {
-      color: lighten(darkred, 15);
+      color: white;
+    }
+    &__nav-link {
+      @include CTA-link();
+
+      margin-top: $MIDLARGE;
+      &:hover {
+        background-color: $MAIN_COLOR_LIGHTEN;
+      }
     }
   }
 }
