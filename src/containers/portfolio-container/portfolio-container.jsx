@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "../../atoms/link";
+import Hyperlink from "../../atoms/hyperlink";
 import projects from "../../content/projects";
 
 import "./portfolio-container.scss";
@@ -7,17 +7,12 @@ import "./portfolio-container.scss";
 const PortfolioContainer = () => (
   <div className="portfolio-container">
     {projects.map(project => (
-      <Link
+      <Hyperlink
         className="portfolio-container__project"
         key={project.projectId}
         href={`/project?projectId=${project.projectId}`}
-      >
-        <img
-          alt={project.thumbnail.alt}
-          className="portfolio-container__project-thumbnail"
-          src={project.thumbnail.src}
-        />
-      </Link>
+        title={`${project.projectId}`}
+      />
     ))}
   </div>
 );

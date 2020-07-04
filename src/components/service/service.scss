@@ -4,38 +4,38 @@
 //Small screens - MOBILE
 @media only screen {
   .service {
-    padding: 0 $medium;
+    padding: 0 $MEDIUM;
     text-align: center;
     &__image {
+      width: 100%;
       max-height: 20vh;
       object-fit: scale-down;
-      width: 100%;
     }
     &__title {
-      @include font-type($mainFont, $midlarge, bold);
+      @include font-type($MAIN_FONT, $MIDLARGE, bold);
 
-      font-size: $midlarge;
-      margin-top: $small;
+      margin-top: $SMALL;
+      font-size: $MIDLARGE;
     }
     &__content {
-      font-size: $medium;
-      margin-top: $small;
+      margin-top: $SMALL;
+      font-size: $MEDIUM;
     }
   }
 }
 
 //Medium screens - TABLET
-@media only screen and (min-width: $mediumScreen) {
+@media only screen and (min-width: $MEDIUM_SCREEN) {
 }
 
 //Large screens - DESKTOP
-@media only screen and (min-width: $largeScreen) {
+@media only screen and (min-width: $LARGE_SCREEN) {
 }
 
 //XLarge screens
-@media only screen and (min-width: $xLargeScreen) {
+@media only screen and (min-width: $XLARGE_SCREEN) {
 }
 
 //XXLarge screens
-@media only screen and (min-width: $xxLargeScreen) {
+@media only screen and (min-width: $XXLARGE_SCREEN) {
 }

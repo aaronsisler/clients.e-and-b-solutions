@@ -4,37 +4,37 @@
 //Small screens - MOBILE
 @media only screen {
   .team {
-    background-color: $lightGrey;
-    padding: $large;
+    padding: $LARGE;
     text-align: center;
+    background-color: $GRAY_300;
     &__header {
-      color: $fontGrey;
+      color: $FONT_GRAY;
       &-title {
-        @include font-type($mainFont, $large, bold);
+        @include font-type($MAIN_FONT, $LARGE, bold);
 
-        color: $darkGrey;
+        color: $GRAY_600;
       }
     }
     &__members {
       display: flex;
       justify-content: center;
-      margin-top: $medium;
+      margin-top: $MEDIUM;
     }
   }
 }
 
 //Medium screens - TABLET
-@media only screen and (min-width: $mediumScreen) {
+@media only screen and (min-width: $MEDIUM_SCREEN) {
 }
 
 //Large screens - DESKTOP
-@media only screen and (min-width: $largeScreen) {
+@media only screen and (min-width: $LARGE_SCREEN) {
 }
 
 //XLarge screens
-@media only screen and (min-width: $xLargeScreen) {
+@media only screen and (min-width: $XLARGE_SCREEN) {
 }
 
 //XXLarge screens
-@media only screen and (min-width: $xxLargeScreen) {
+@media only screen and (min-width: $XXLARGE_SCREEN) {
 }

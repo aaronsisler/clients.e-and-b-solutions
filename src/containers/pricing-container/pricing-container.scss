@@ -4,44 +4,44 @@
 //Small screens - MOBILE
 @media only screen {
   .pricing-container {
+    display: grid;
+    flex: 1 1 auto;
+    grid-gap: $MIDLARGE;
+    grid-template-columns: 100%;
+    padding: $MIDLARGE $SMALL;
     background:
       radial-gradient(
         circle,
-        $secColor 0%,
-        darken($mainColor, 20) 100%
+        $SEC_COLOR 0%,
+        darken($MAIN_COLOR, 20) 100%
       );
-    display: grid;
-    flex: 1 1 auto;
-    grid-template-columns: 100%;
-    grid-gap: $midlarge;
-    padding: $midlarge $small;
     &__package {
-      background: white;
-      border-radius: $xxsmall;
       display: grid;
-      padding: $large;
+      padding: $LARGE;
       text-align: center;
+      background: white;
+      border-radius: $XXSMALL;
       &-header {
         &-title {
-          @include font-type($mainFont, $midlarge, bold);
+          @include font-type($MAIN_FONT, $MIDLARGE, bold);
 
-          margin-bottom: $midlarge;
+          margin-bottom: $MIDLARGE;
         }
         &-content {
-          @include font-type($mainFont);
+          @include font-type($MAIN_FONT);
 
-          color: $midGrey;
+          color: $GRAY_400;
         }
       }
       &-cost {
-        @include font-type($mainFont, $large, bold);
+        @include font-type($MAIN_FONT, $LARGE, bold);
 
-        margin: $midlarge 0;
+        margin: $MIDLARGE 0;
       }
       &-content {
-        @include font-type($mainFont);
+        @include font-type($MAIN_FONT);
 
-        margin-bottom: $midlarge;
+        margin-bottom: $MIDLARGE;
       }
       &-button {
         @include button();
@@ -51,24 +51,24 @@
 }
 
 //Medium screens - TABLET
-@media only screen and (min-width: $mediumScreen) {
+@media only screen and (min-width: $MEDIUM_SCREEN) {
   .pricing-container {
-    padding: $midlarge 20%;
+    padding: $MIDLARGE 20%;
   }
 }
 
 //Large screens - DESKTOP
-@media only screen and (min-width: $largeScreen) {
+@media only screen and (min-width: $LARGE_SCREEN) {
   .pricing-container {
     grid-template-columns: 1fr 1fr 1fr;
-    padding: $xlarge 10%;
+    padding: $XLARGE 10%;
   }
 }
 
 //XLarge screens
-@media only screen and (min-width: $xLargeScreen) {
+@media only screen and (min-width: $XLARGE_SCREEN) {
 }
 
 //XXLarge screens
-@media only screen and (min-width: $xxLargeScreen) {
+@media only screen and (min-width: $XXLARGE_SCREEN) {
 }

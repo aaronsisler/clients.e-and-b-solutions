@@ -13,6 +13,8 @@
     "gen:comp": "node ./node_modules/@ebsolutions/generate-react-templates --type=COMP",
     "gen:cont": "node ./node_modules/@ebsolutions/generate-react-templates --type=CONT",
     "gen:page": "node ./node_modules/@ebsolutions/generate-react-templates --type=PAGE",
+    "lint": "eslint \"./**/*.js\"",
+    "lint:style": "node ./node_modules/stylelint/bin/stylelint.js \"**/*.{css,scss}\"",
     "start": "yarn clear-next && next ./src"
   },
   "engines": {
