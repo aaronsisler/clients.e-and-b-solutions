@@ -14,7 +14,8 @@
     justify-content: flex-end;
     height: $NAV_MENU_HEIGHT;
     padding: $SMALL;
-    background-color: $MAIN_COLOR;
+    background-color: white;
+    box-shadow: $BOX_SHADOW;
     &__logo {
       position: absolute;
       left: 50%;
@@ -43,7 +44,7 @@
     &__link {
       display: block;
       padding: $MEDIUM;
-      color: white;
+      color: $MAIN_COLOR;
       font-size: $LARGE;
       text-align: center;
       text-transform: uppercase;
