@@ -6,41 +6,43 @@ const MoreContainer = () => (
   <div className="page-container">
     <div className="content-container">
       <div className="split-wrapper">
-        <div className="split">
-          <div className="refs">
-            <div className="refs-column">
-              <TableSection name="Refs" />
-            </div>
-          </div>
-          <div className="content">
-            <div className="splitter">
-              <div className="splitter-columns">
-                <TableSection name="Splitter 1" />
+        <div className="split-again">
+          <div className="split">
+            <div className="refs">
+              <div className="refs-column">
+                <TableSection name="Refs" />
               </div>
             </div>
-            <div className="splitter">
-              <div className="splitter-columns">
-                <TableSection name="Splitter 2" />
+            <div className="content">
+              <div className="splitter">
+                <div className="splitter-columns">
+                  <TableSection name="Splitter 1" />
+                </div>
               </div>
-            </div>
-            <div className="splitter">
-              <div className="splitter-columns">
-                <TableSection name="Splitter 3" />
+              <div className="splitter">
+                <div className="splitter-columns">
+                  <TableSection name="Splitter 2" />
+                </div>
               </div>
-            </div>
-            <div className="splitter">
-              <div className="splitter-columns">
-                <TableSection name="Splitter 2" />
+              <div className="splitter">
+                <div className="splitter-columns">
+                  <TableSection name="Splitter 3" />
+                </div>
               </div>
-            </div>
-            <div className="splitter">
-              <div className="splitter-columns">
-                <TableSection name="Splitter 2" />
+              <div className="splitter">
+                <div className="splitter-columns">
+                  <TableSection name="Splitter 2" />
+                </div>
               </div>
-            </div>
-            <div className="splitter">
-              <div className="splitter-columns">
-                <TableSection name="Splitter 2" />
+              <div className="splitter">
+                <div className="splitter-columns">
+                  <TableSection name="Splitter 2" />
+                </div>
+              </div>
+              <div className="splitter">
+                <div className="splitter-columns">
+                  <TableSection name="Splitter 2" />
+                </div>
               </div>
             </div>
           </div>
