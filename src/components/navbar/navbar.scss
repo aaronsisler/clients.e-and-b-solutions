@@ -47,7 +47,6 @@
       color: $MAIN_COLOR;
       font-size: $LARGE;
       text-align: center;
-      text-transform: uppercase;
       text-decoration: none;
     }
   }
@@ -62,6 +61,11 @@
   @media only screen and (min-width: $LARGE_SCREEN) {
     .navbar {
       justify-content: space-between;
+      &__brand {
+        * {
+          font-family: $SEC_FONT;
+        }
+      }
       &__logo {
         position: static;
         left: auto;

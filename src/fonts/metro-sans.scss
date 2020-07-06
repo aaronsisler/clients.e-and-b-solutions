@@ -1,0 +1,17 @@
+@font-face {
+  font-weight: lighter;
+  font-family: "Metro Sans Light";
+  font-style: normal;
+  src: url("../static/fonts/metro-sans-book.woff") format("woff");
+  // src: url($FONTS_CDN+"/metro-sans-book.woff") format("woff"),
+  // url($FONTS_CDN+"/metro-sans-book.woff2") format("woff2");
+}
+
+@font-face {
+  font-weight: normal;
+  font-family: "Metro Sans Regular";
+  font-style: normal;
+  src: url("../static/fonts/metro-sans-regular.woff") format("woff");
+  // src: url($FONTS_CDN+"/Ubuntu_Regular.woff") format("woff"),
+  // url($FONTS_CDN+"/Ubuntu_Regular.woff") format("woff2");
+}

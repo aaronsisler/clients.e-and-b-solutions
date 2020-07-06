@@ -14,9 +14,9 @@ class MyApp extends App {
         <Head>
           <title>E&amp;B Solutions</title>
         </Head>
-        <Navbar />
+        {/* <Navbar /> */}
         <Component {...pageProps} />
-        <Footer />
+        {/* <Footer /> */}
       </>
     );
   }
