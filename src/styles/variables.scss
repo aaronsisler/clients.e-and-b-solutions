@@ -11,6 +11,7 @@ $GRAY_300: #9fa1a4;
 $GRAY_200: #d8d8d8;
 $GRAY_100: #f5f5f5;
 $PRETTY_BLUE: #1563ff;
+$PRETTY_PURPLE: #623ce4;
 
 // Feature Specific Colors
 $FONT_GRAY: rgba(0, 0, 0, 0.7);
@@ -32,7 +33,7 @@ $XLARGE: 4.8rem;
 $XXLARGE: 7.6rem;
 
 //Component Heights
-$NAV_MENU_HEIGHT: 90px;
+$NAV_MENU_HEIGHT: 65px;
 $FOOTER_HEIGHT: 50px;
 $MAIN_HEIGHT: calc(100vh - 140px);
 $LINE_HEIGHT: 1.5;
@@ -44,8 +45,10 @@ $XLARGE_SCREEN: 1441px;
 $XXLARGE_SCREEN: 1921px;
 
 // Site Fonts
-$MAIN_FONT: "Gotham Light";
-$SEC_FONT: "Gilmer Light";
+$MAIN_FONT: "Gotham Regular";
+$MAIN_FONT_LIGHT: "Gotham Light";
+$SEC_FONT: "Gilmer Regular";
+$SEC_FONT_LIGHTER: "Gilmer Light";
 
 // Fonts CDN
 $FONTS_CDN: "https://cdn-e-and-b-solutions.s3.amazonaws.com/resources/fonts";

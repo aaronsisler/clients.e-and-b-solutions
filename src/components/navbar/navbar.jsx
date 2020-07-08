@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import cn from "classnames";
+
+import Logo from "../logo";
 import Hyperlink from "../../atoms/hyperlink";
 import Hamburger from "../../atoms/hamburger";
 
@@ -11,12 +13,8 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="navbar__brand">
-        <Hyperlink
-          className="navbar__brand-link"
-          href="/"
-          title="E&amp;B Solutions"
-        />
+      <div className="navbar__logo">
+        <Logo />
       </div>
       <div className="navbar__toggle">
         <Hamburger
