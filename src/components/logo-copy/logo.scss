@@ -1,0 +1,117 @@
+@import "../../styles/variables.scss";
+
+$GLOW_COLOR: $PRETTY_PURPLE;
+$FILL_COLOR: $MAIN_COLOR_LIGHTEN;
+$STROKE_COLOR: $MAIN_COLOR_LIGHTEN;
+
+//Small screens - MOBILE
+@media only screen {
+  .logo-glow {
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border-radius: 50%;
+    .circle {
+      &__inner {
+        position: absolute;
+        stroke-width: 3;
+        stroke-dasharray: 49, 15;
+        stroke-linecap: round;
+        border-radius: 1px;
+        fill: none;
+        stroke: $GLOW_COLOR;
+        cx: 25;
+        cy: 25;
+        r: 12;
+      }
+    }
+    rect {
+      stroke-width: 2;
+      width: 3px;
+      height: 10px;
+      fill: $GLOW_COLOR;
+      x: 23.5;
+      y: 10;
+      rx: 5;
+      ry: 2;
+    }
+  }
+  .logo-double {
+    width: 50px;
+    height: 50px;
+    .circle {
+      &__inner {
+        stroke-width: 2;
+        stroke-dasharray: 41.5, 11;
+        stroke-linecap: round;
+        border-radius: 1px;
+        fill: none;
+        stroke: $STROKE_COLOR;
+        cx: 25;
+        cy: 25;
+        r: 10;
+      }
+      &__outer {
+        stroke-width: 2;
+        fill: none;
+        stroke: $STROKE_COLOR;
+        cx: 25;
+        cy: 25;
+        r: 22;
+      }
+    }
+    rect {
+      stroke-width: 1;
+      width: 1px;
+      height: 10px;
+      fill: $FILL_COLOR;
+      stroke: $STROKE_COLOR;
+      x: 24.75;
+      y: 12;
+      rx: 1;
+      ry: 1;
+    }
+  }
+  .logo-og {
+    width: 50px;
+    height: 50px;
+    circle {
+      stroke-width: 5;
+      stroke-dasharray: 85, 18;
+      stroke-linecap: round;
+      border-radius: 1px;
+      fill: none;
+      stroke: black;
+      cx: 25;
+      cy: 27;
+      r: 20;
+    }
+    rect {
+      stroke-width: 3;
+      width: 2px;
+      height: 20px;
+      fill: black;
+      stroke: black;
+      x: 24;
+      y: 2;
+      rx: 5;
+      ry: 2;
+    }
+  }
+}
+
+//Medium screens - TABLET
+@media only screen and (min-width: $MEDIUM_SCREEN) {
+}
+
+//Large screens - DESKTOP
+@media only screen and (min-width: $LARGE_SCREEN) {
+}
+
+//XLarge screens
+@media only screen and (min-width: $XLARGE_SCREEN) {
+}
+
+//XXLarge screens
+@media only screen and (min-width: $XXLARGE_SCREEN) {
+}

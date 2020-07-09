@@ -31,6 +31,9 @@
         min-height: 200px;
       }
     }
+    &.body__no-scroll {
+      overflow: hidden;
+    }
   }
 }
 

@@ -1,20 +1,16 @@
 import React from "react";
 import NextLink from "next/link";
-import { CDN_URL } from "../../config";
 
 import "./logo.scss";
 
-const logo = {
-  alt: "E&B Solutions",
-  src: `${CDN_URL}/logo.png`
-};
-
 const Logo = () => (
-  <div className="logo">
-    <NextLink href="/">
-      <img className="logo__image" src={logo.src} alt={logo.alt} />
-    </NextLink>
-  </div>
+  <NextLink href="/">
+    <svg className="logo">
+      <circle className="circle__inner" />
+      <circle className="circle__outer" />
+      <rect />
+    </svg>
+  </NextLink>
 );
 
 export default Logo;
