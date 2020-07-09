@@ -3,9 +3,10 @@
 @mixin font-type(
   $fontFamily: $MAIN_FONT,
   $fontSize: $MEDIUM,
-  $fontWeight: 400
+  $fontWeight: 400,
+  $color: $FONT_GRAY
 ) {
-  color: $FONT_GRAY;
+  color: $color;
   font-weight: $fontWeight;
   font-size: $fontSize;
   font-family: $fontFamily;

@@ -22,6 +22,14 @@
       display: flex;
       align-content: center;
       justify-content: space-between;
+      cursor: pointer;
+      &-icon {
+        width: 50px;
+        height: 50px;
+      }
+      &-title {
+        display: none;
+      }
     }
     &__toggle {
       z-index: 9001;
@@ -44,11 +52,11 @@
       }
     }
     &__link {
+      @include font-type($MAIN_FONT_LIGHT, $LARGE);
+
       padding: $MEDIUM;
       color: rgba($color: #fff, $alpha: 0.9);
-      font-size: $LARGE;
       text-align: center;
-      text-decoration: none;
     }
   }
 
@@ -62,33 +70,43 @@
   @media only screen and (min-width: $LARGE_SCREEN) {
     .navbar {
       justify-content: space-between;
-      &__brand {
-        * {
-          font-family: $SEC_FONT;
-        }
-      }
       &__logo {
-        position: static;
-        left: auto;
-        transform: none;
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        &-icon {
+          width: 35px;
+          height: 35px;
+        }
+        &-title {
+          @include font-type($SEC_FONT, $MEDIUM, bold, $MAIN_COLOR);
+
+          display: block;
+          margin-left: $XSMALL;
+        }
       }
       &__toggle {
         display: none;
       }
       &__links {
-        position: inherit;
+        position: relative;
         top: inherit;
         right: inherit;
         display: flex;
+        flex-direction: row;
         align-items: center;
+        justify-content: flex-end;
         width: inherit;
         height: inherit;
         padding: 0;
         background-color: inherit;
+        border-bottom: 1px solid $MAIN_COLOR;
         transition: none;
       }
       &__link {
-        font-size: $MEDIUM;
+        @include font-type($SEC_FONT_LIGHT, $MEDIUM, 400, $MAIN_COLOR);
+
+        // padding: 0;
         &:hover {
           color: $MAIN_COLOR_INVERTED;
           transition: color 0.2s ease-in;
