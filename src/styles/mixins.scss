@@ -45,27 +45,22 @@
 }
 
 @mixin CTA-link {
-  display: inline-block;
   align-self: center;
-  margin: 0;
   padding: $MEDIUM $MIDLARGE;
-  color: $MAIN_COLOR;
+  color: white;
   font-size: $MEDIUM;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  background-color: white;
-  border: 2px solid $MAIN_COLOR;
+  background-color: rgba-with-var($MAIN_COLOR, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.7);
   border-radius: $XXSMALL;
   cursor: pointer;
   &:hover {
-    color: white;
-    background: $MAIN_COLOR;
+    background: $MAIN_COLOR_LIGHTEN;
     transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
   }
   &:disabled {
-    color: white;
-    background: $MAIN_COLOR;
     cursor: not-allowed;
     opacity: 0.25;
   }

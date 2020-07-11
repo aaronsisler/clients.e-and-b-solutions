@@ -7,17 +7,27 @@
   .landing {
     display: flex;
     flex: 1 1 auto;
-    // background-color: black;
-    &__content {
-      width: 100%;
-      height: 125vh;
-      &-title {
-        @include font-type($SEC_FONT, $LARGE, bold);
+    flex-direction: column;
+    background-color: black;
+    &__title {
+      @include font-type($SEC_FONT, $LARGE, bold);
 
-        margin-top: $XXLARGE;
-        color: white;
-        text-align: center;
-      }
+      margin-top: $XXLARGE;
+      color: white;
+      text-align: center;
+    }
+    &__secondary {
+      @include font-type($SEC_FONT, $MEDIUM);
+
+      margin-top: $LARGE;
+      padding: 0 $MEDIUM;
+      color: white;
+      text-align: center;
+    }
+    &__cta {
+      @include CTA-link();
+
+      margin-top: $XXLARGE;
     }
   }
 }
@@ -30,6 +40,12 @@
 //min-width 1025px, large screens
 @media only screen and (min-width: $LARGE_SCREEN) {
   .landing {
+    &__secondary {
+      max-width: $MAX_TEXT_WIDTH;
+      margin-right: auto;
+      margin-left: auto;
+      padding: 0;
+    }
   }
 }
 

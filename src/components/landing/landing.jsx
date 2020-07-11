@@ -5,10 +5,16 @@ import "./landing.scss";
 
 const Landing = () => (
   <div className="landing">
-    <div className="landing__content">
-      <h1 className="landing__content-title">Technology made easy</h1>
-      <Hyperlink href="/pricing" title="Let's Get Started" />
-    </div>
+    <h1 className="landing__title">Technology made easy</h1>
+    <p className="landing__secondary">
+      Running a business is hectic enough. Let us worry about building and
+      keeping your site up to date.
+    </p>
+    <Hyperlink
+      href="/pricing"
+      title="Let's Get Started"
+      className="landing__cta"
+    />
   </div>
 );
 

@@ -88,9 +88,23 @@
       }
       &__link {
         @include font-type($SEC_FONT_LIGHT, $MIDSMALL, 400, $MAIN_COLOR);
-        &:hover {
-          color: $MAIN_COLOR_INVERTED;
-          transition: color 0.2s ease-in;
+
+        position: relative;
+        margin-bottom: $MIDSMALL;
+        padding-bottom: $XSMALL;
+        &::after {
+          position: absolute;
+          bottom: 1px;
+          left: 10%;
+          width: 80%;
+          border-style: solid;
+          border-width: 0 0 1px;
+          opacity: 0;
+          content: "";
+        }
+        &:hover::after {
+          opacity: 1;
+          transition: all 0.2s ease-in-out;
         }
       }
     }
