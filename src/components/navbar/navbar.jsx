@@ -21,10 +21,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="navbar__logo">
-        <Logo className="navbar__logo-icon" />
-        <div className="navbar__logo-title">E&amp;B&nbsp;Solutions</div>
-      </div>
+      <Logo className="navbar__logo" />
       <div className="navbar__toggle">
         <Hamburger
           isToggled={isMenuOpen}

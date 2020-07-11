@@ -12,6 +12,12 @@
   font-family: $fontFamily;
 }
 
+@function rgba-with-var($color, $alpha: 1) {
+  @return unquote(
+    "rgba(#{red($color)}, #{green($color)}, #{blue($color)}, #{$alpha})"
+  );
+}
+
 @mixin button() {
   @include font-type($MAIN_FONT, $MEDIUM);
 

@@ -16,20 +16,14 @@
     height: $NAV_MENU_HEIGHT;
     padding: 0 $MIDLARGE;
     background-color: white;
-    border-bottom: 1px solid $MAIN_COLOR;
     &__logo {
       z-index: 9001;
       display: flex;
       align-content: center;
       justify-content: space-between;
+      width: 50px;
+      height: 50px;
       cursor: pointer;
-      &-icon {
-        width: 50px;
-        height: 50px;
-      }
-      &-title {
-        display: none;
-      }
     }
     &__toggle {
       z-index: 9001;
@@ -74,16 +68,6 @@
         display: flex;
         align-items: center;
         width: fit-content;
-        &-icon {
-          width: 35px;
-          height: 35px;
-        }
-        &-title {
-          @include font-type($SEC_FONT, $MEDIUM, bold, $MAIN_COLOR);
-
-          display: block;
-          margin-left: $XSMALL;
-        }
       }
       &__toggle {
         display: none;
@@ -100,13 +84,10 @@
         height: inherit;
         padding: 0;
         background-color: inherit;
-        border-bottom: 1px solid $MAIN_COLOR;
         transition: none;
       }
       &__link {
-        @include font-type($SEC_FONT_LIGHT, $MEDIUM, 400, $MAIN_COLOR);
-
-        // padding: 0;
+        @include font-type($SEC_FONT_LIGHT, $MIDSMALL, 400, $MAIN_COLOR);
         &:hover {
           color: $MAIN_COLOR_INVERTED;
           transition: color 0.2s ease-in;
