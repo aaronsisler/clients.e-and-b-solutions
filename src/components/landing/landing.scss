@@ -6,9 +6,9 @@
 @media only screen {
   .landing {
     display: flex;
-    flex: 1 1 auto;
     flex-direction: column;
     background-color: black;
+    // opacity: 0.98;
     &__title {
       @include font-type($SEC_FONT, $LARGE, bold);
 
@@ -19,7 +19,8 @@
     &__secondary {
       @include font-type($SEC_FONT, $MEDIUM);
 
-      margin-top: $LARGE;
+      max-width: $MAX_TEXT_WIDTH;
+      margin: $LARGE auto 0;
       padding: 0 $MEDIUM;
       color: white;
       text-align: center;
@@ -28,6 +29,29 @@
       @include CTA-link();
 
       margin-top: $XXLARGE;
+    }
+    &__section-divide {
+      position: relative;
+      display: flex;
+      width: 100%;
+      height: 100px;
+      overflow: hidden;
+      background-color: white;
+      svg {
+        display: none;
+      }
+      &::before {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 125%;
+        height: 25vh;
+        background-color: black;
+        border-radius: 50%;
+        transform: translateX(-50%);
+        transform-origin: bottom;
+        content: "";
+      }
     }
   }
 }
@@ -41,10 +65,41 @@
 @media only screen and (min-width: $LARGE_SCREEN) {
   .landing {
     &__secondary {
-      max-width: $MAX_TEXT_WIDTH;
       margin-right: auto;
       margin-left: auto;
       padding: 0;
+    }
+    &__cta {
+      margin-bottom: 0;
+    }
+    &__section-divide {
+      position: relative;
+      display: unset;
+      width: 100%;
+      height: 125px;
+      overflow: unset;
+      background-color: unset;
+      &::before {
+        display: none;
+      }
+      svg {
+        position: absolute;
+        right: -10px;
+        bottom: 0;
+        left: -10px;
+        display: unset;
+      }
+      .fill {
+        z-index: 3;
+        fill: white;
+      }
+      .line {
+        display: unset;
+        transform: translateY(-25px) rotate(-1deg);
+        fill: transparent;
+        stroke: $MAIN_COLOR_LIGHTEN;
+        stroke-width: 2;
+      }
     }
   }
 }
