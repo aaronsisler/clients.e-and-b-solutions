@@ -5,14 +5,30 @@
 //max-width 640px, small screens
 @media only screen {
   .landing {
+    position: relative;
+    z-index: 20;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
     background-color: black;
-    // opacity: 0.98;
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      z-index: 10;
+      width: 125%;
+      height: 25vh;
+      background-color: black;
+      border-radius: 50%;
+      transform: translateX(-50%);
+      transform-origin: bottom;
+      content: "";
+    }
     &__title {
       @include font-type($SEC_FONT, $LARGE, bold);
 
       margin-top: $XXLARGE;
+      padding: 0 $SMALL;
       color: white;
       text-align: center;
     }
@@ -28,29 +44,14 @@
     &__cta {
       @include CTA-link();
 
-      margin-top: $XXLARGE;
+      z-index: 20;
+      margin: $XXLARGE $MEDIUM 0;
     }
     &__section-divide {
-      position: relative;
-      display: flex;
-      width: 100%;
       height: 100px;
-      overflow: hidden;
       background-color: white;
       svg {
         display: none;
-      }
-      &::before {
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        width: 125%;
-        height: 25vh;
-        background-color: black;
-        border-radius: 50%;
-        transform: translateX(-50%);
-        transform-origin: bottom;
-        content: "";
       }
     }
   }
@@ -64,6 +65,9 @@
 //min-width 1025px, large screens
 @media only screen and (min-width: $LARGE_SCREEN) {
   .landing {
+    &::after {
+      display: none;
+    }
     &__secondary {
       margin-right: auto;
       margin-left: auto;
@@ -76,26 +80,23 @@
       position: relative;
       display: unset;
       width: 100%;
-      height: 125px;
+      height: 200px;
       overflow: unset;
       background-color: unset;
-      &::before {
-        display: none;
-      }
       svg {
         position: absolute;
-        right: -10px;
+        right: -50px;
         bottom: 0;
-        left: -10px;
+        left: -30px;
         display: unset;
       }
-      .fill {
+      .svg__fill {
         z-index: 3;
         fill: white;
       }
-      .line {
+      .svg__line {
         display: unset;
-        transform: translateY(-25px) rotate(-1deg);
+        transform: translate(-45px, -25px) rotate(-2deg);
         fill: transparent;
         stroke: $MAIN_COLOR_LIGHTEN;
         stroke-width: 2;
