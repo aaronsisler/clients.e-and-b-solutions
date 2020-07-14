@@ -4,7 +4,20 @@
 //Small screens - MOBILE
 @media only screen {
   .about-us {
-    background-color: greenyellow;
+    padding: 0 $MEDIUM;
+    &__title {
+      @include font-type($SEC_FONT, $LARGE, bold, rgba-with-var(black, 0.8));
+
+      margin-top: $XLARGE;
+      text-align: center;
+    }
+    &__text {
+      @include font-type($SEC_FONT, $MEDIUM, 400, rgba-with-var(black, 0.8));
+
+      max-width: $MAX_TEXT_WIDTH;
+      margin: $LARGE auto 0;
+      text-align: center;
+    }
   }
 }
 
