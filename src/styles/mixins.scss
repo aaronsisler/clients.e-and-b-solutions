@@ -18,33 +18,9 @@
   );
 }
 
-@mixin button() {
-  @include font-type($MAIN_FONT, $MEDIUM);
-
-  display: grid;
-  align-items: center;
-  min-height: $XLARGE;
-  padding: $SMALL $MIDLARGE;
-  color: white;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  background-color: $MAIN_COLOR;
-  border-radius: $XSMALL;
-  cursor: pointer;
-  &:hover {
-    background-color: $MAIN_COLOR_LIGHTEN;
-    transition: background-color 0.5s ease-in-out;
-  }
-  &:disabled {
-    color: white;
-    background: $MAIN_COLOR;
-    cursor: not-allowed;
-    opacity: 0.5;
-  }
-}
-
 @mixin CTA-link {
+  position: relative;
+  z-index: 2;
   align-self: center;
   padding: $MEDIUM $MIDLARGE;
   color: white;
@@ -52,7 +28,7 @@
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  background-color: rgba-with-var($MAIN_COLOR, 0.8);
+  background-color: $MAIN_COLOR;
   border: 1px solid rgba(255, 255, 255, 0.7);
   border-radius: $XXSMALL;
   cursor: pointer;
@@ -62,7 +38,7 @@
   }
   &:disabled {
     cursor: not-allowed;
-    opacity: 0.25;
+    opacity: 0.5;
   }
 }
 

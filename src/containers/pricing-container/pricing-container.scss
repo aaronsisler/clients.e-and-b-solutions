@@ -9,42 +9,43 @@
     grid-gap: $MIDLARGE;
     grid-template-columns: 100%;
     padding: $MIDLARGE $SMALL;
-    background:
-      radial-gradient(
-        circle,
-        $SEC_COLOR 0%,
-        darken($MAIN_COLOR, 20) 100%
-      );
+    background: radial-gradient(
+      circle,
+      $SEC_COLOR 0%,
+      darken($MAIN_COLOR, 20) 100%
+    );
     &__package {
       display: grid;
       padding: $LARGE;
       text-align: center;
       background: white;
       border-radius: $XXSMALL;
-      &-header {
-        &-title {
-          @include font-type($MAIN_FONT, $MIDLARGE, bold);
+      .package {
+        &__header {
+          &-title {
+            @include font-type($MAIN_FONT, $MIDLARGE, bold);
+
+            margin-bottom: $MIDLARGE;
+          }
+          &-content {
+            @include font-type($MAIN_FONT);
+
+            color: $GRAY_400;
+          }
+        }
+        &__cost {
+          @include font-type($MAIN_FONT, $LARGE, bold);
+
+          margin: $MIDLARGE 0;
+        }
+        &__content {
+          @include font-type($MAIN_FONT);
 
           margin-bottom: $MIDLARGE;
         }
-        &-content {
-          @include font-type($MAIN_FONT);
-
-          color: $GRAY_400;
+        &__link {
+          @include CTA_link();
         }
-      }
-      &-cost {
-        @include font-type($MAIN_FONT, $LARGE, bold);
-
-        margin: $MIDLARGE 0;
-      }
-      &-content {
-        @include font-type($MAIN_FONT);
-
-        margin-bottom: $MIDLARGE;
-      }
-      &-button {
-        @include button();
       }
     }
   }
@@ -60,8 +61,8 @@
 //Large screens - DESKTOP
 @media only screen and (min-width: $LARGE_SCREEN) {
   .pricing-container {
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: $XLARGE 10%;
+    grid-template-columns: 1fr 1fr;
+    padding: $XLARGE 20%;
   }
 }
 
