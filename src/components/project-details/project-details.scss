@@ -6,46 +6,46 @@
   .project-details {
     display: grid;
     grid-area: project-details;
-    margin: auto 0;
     width: 100%;
+    margin: auto 0;
     &__header {
-      margin-bottom: $medium;
+      margin-bottom: $MEDIUM;
     }
     &__client {
-      @include font-type($mainFont, $large, bold);
+      @include font-type($MAIN_FONT, $LARGE, bold);
 
       line-height: 1.25;
     }
     &__date {
-      @include font-type($mainFont, $medium);
+      @include font-type($MAIN_FONT, $MEDIUM);
     }
     &__overview {
-      margin-bottom: $small;
+      margin-bottom: $SMALL;
       &-title {
-        @include font-type($secFont, $medium);
+        @include font-type($MAIN_FONT, $MEDIUM);
       }
       &-content {
-        @include font-type($mainFont, $medium);
+        @include font-type($MAIN_FONT, $MEDIUM);
       }
     }
     &__design {
-      margin-bottom: $small;
+      margin-bottom: $SMALL;
       &-title {
-        @include font-type($secFont, $medium);
+        @include font-type($MAIN_FONT, $MEDIUM);
       }
       &-content {
-        @include font-type($mainFont, $medium);
+        @include font-type($MAIN_FONT, $MEDIUM);
       }
     }
     &__features {
-      margin-bottom: $xsmall;
+      margin-bottom: $XSMALL;
       &-title {
-        @include font-type($secFont, $medium);
+        @include font-type($MAIN_FONT, $MEDIUM);
 
-        margin-bottom: $xxsmall;
+        margin-bottom: $XXSMALL;
       }
       &-list {
-        @include font-type($mainFont, $medium);
+        @include font-type($MAIN_FONT, $MEDIUM);
         &-item {
           margin-left: 5%;
         }
@@ -55,17 +55,17 @@
 }
 
 //Medium screens - TABLET
-@media only screen and (min-width: $mediumScreen) {
+@media only screen and (min-width: $MEDIUM_SCREEN) {
 }
 
 //Large screens - DESKTOP
-@media only screen and (min-width: $largeScreen) {
+@media only screen and (min-width: $LARGE_SCREEN) {
 }
 
 //XLarge screens
-@media only screen and (min-width: $xLargeScreen) {
+@media only screen and (min-width: $XLARGE_SCREEN) {
 }
 
 //XXLarge screens
-@media only screen and (min-width: $xxLargeScreen) {
+@media only screen and (min-width: $XXLARGE_SCREEN) {
 }

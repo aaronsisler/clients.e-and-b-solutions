@@ -6,71 +6,58 @@
   .contact-form {
     @include font-type();
 
-    height: 100%;
+    display: grid;
+    grid-gap: $SMALL;
+    grid-template-columns: 100%;
     width: 100%;
-    &__header {
-      margin: 0 auto;
-      text-align: center;
-      &-content {
-        display: grid;
-        margin: 0 auto;
-        text-align: center;
-      }
-    }
-    &__form {
-      display: grid;
-      grid-gap: $medium;
-      grid-template-columns: 100%;
-      justify-content: center;
-      margin: $medium auto;
-      width: 100%;
-      &-input {
-        display: grid;
-        font-size: $medium;
-        margin: 0 auto;
-        width: 100%;
-      }
-      &-message {
-        @include textarea();
-      }
-      &-button {
-        @include button();
-      }
-    }
-    &__email {
-      @include font-type($mainFont, $midlarge);
+    height: 100%;
+    padding: $LARGE $MEDIUM;
+    opacity: 0.95;
+    &__title {
+      @include font-type($MAIN_FONT, $MIDLARGE, bold);
 
-      padding: $small 0 $medium;
+      margin-bottom: $SMALL;
       text-align: center;
-      &--error {
-        border-bottom: $border;
-        margin-bottom: $small;
-      }
+    }
+    &__message {
+      @include textarea();
+
+      margin-top: $SMALL;
+    }
+    &__button {
+      @include CTA-link();
+    }
+    &__email-sent {
+      @include font-type($MAIN_FONT, $MIDLARGE);
+
+      margin: auto;
+      text-align: center;
     }
   }
 }
 
 //Medium screens - TABLET
-@media only screen and (min-width: $mediumScreen) {
+@media only screen and (min-width: $MEDIUM_SCREEN) {
+  .contact-form {
+    min-width: 350px;
+  }
 }
 
 //Large screens - DESKTOP
-@media only screen and (min-width: $largeScreen) {
+@media only screen and (min-width: $LARGE_SCREEN) {
   .contact-form {
-    display: grid;
-    max-width: 30vw;
-    padding: 0 $medium;
-    &__email {
-      padding: $medium 0;
-      text-align: center;
+    min-width: 500px;
+    max-width: 750px;
+    &__title {
+      @include font-type($MAIN_FONT, $LARGE, bold);
     }
   }
 }
 
 //XLarge screens
-@media only screen and (min-width: $xLargeScreen) {
+@media only screen and (min-width: $XLARGE_SCREEN) {
 }
 
 //XXLarge screens
-@media only screen and (min-width: $xxLargeScreen) {
+@media only screen and (min-width: $XXLARGE_SCREEN) {
 }

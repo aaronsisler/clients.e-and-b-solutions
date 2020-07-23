@@ -4,7 +4,7 @@ Code base for E&amp;B Solutions
 
 ## Deving steps:
 
-1.  Install packages using [Yarn 1.5.1](https://github.com/yarnpkg/yarn/releases/tag/v1.5.1)
+1.  Install packages using [Yarn](https://classic.yarnpkg.com/en/)
 
 ```bash
         yarn

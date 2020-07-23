@@ -5,38 +5,38 @@
 @media only screen {
   .project-container {
     display: grid;
-    grid-gap: $small;
+    grid-gap: $SMALL;
     grid-template-areas: "project-images" "project-details";
-    padding: $medium;
+    padding: $MEDIUM;
   }
 }
 
 //Medium screens - TABLET
-@media only screen and (min-width: $mediumScreen) {
+@media only screen and (min-width: $MEDIUM_SCREEN) {
   .project-container {
-    align-content: center;
     flex: 1 1 auto;
-    grid-gap: $medium;
+    grid-gap: $MEDIUM;
     grid-template-areas: "project-details project-images";
     grid-template-columns: 1fr 1fr;
+    align-content: center;
     padding: 0 5%;
   }
 }
 
 //Large screens - DESKTOP
-@media only screen and (min-width: $largeScreen) {
+@media only screen and (min-width: $LARGE_SCREEN) {
   .project-container {
-    grid-gap: $xxlarge;
+    grid-gap: $XXLARGE;
   }
 }
 
 //XLarge screens
-@media only screen and (min-width: $xLargeScreen) {
+@media only screen and (min-width: $XLARGE_SCREEN) {
   .project-container {
     padding: 0 10%;
   }
 }
 
 //XXLarge screens
-@media only screen and (min-width: $xxLargeScreen) {
+@media only screen and (min-width: $XXLARGE_SCREEN) {
 }

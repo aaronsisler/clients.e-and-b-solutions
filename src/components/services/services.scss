@@ -4,32 +4,32 @@
 //Small screens - MOBILE
 @media only screen {
   .services {
-    color: $fontGrey;
-    padding: $small 0 $large;
+    padding: $SMALL 0 $LARGE;
+    color: $FONT_GRAY;
     &__header {
-      margin: $large auto;
+      margin: $LARGE auto;
       text-align: center;
       &-title {
-        @include font-type($mainFont, $large, bold);
+        @include font-type($MAIN_FONT, $LARGE, bold);
 
-        color: $darkGrey;
-        margin: 0 $small;
+        margin: 0 $SMALL;
+        color: $GRAY_600;
       }
     }
     &__content {
       display: grid;
-      grid-gap: $large;
+      grid-gap: $LARGE;
       margin: 0 5%;
     }
   }
 }
 
 //Medium screens - TABLET
-@media only screen and (min-width: $mediumScreen) {
+@media only screen and (min-width: $MEDIUM_SCREEN) {
 }
 
 //Large screens - DESKTOP
-@media only screen and (min-width: $largeScreen) {
+@media only screen and (min-width: $LARGE_SCREEN) {
   .services {
     &__content {
       grid-template-columns: 1fr 1fr 1fr;
@@ -38,9 +38,9 @@
 }
 
 //XLarge screens
-@media only screen and (min-width: $xLargeScreen) {
+@media only screen and (min-width: $XLARGE_SCREEN) {
 }
 
 //XXLarge screens
-@media only screen and (min-width: $xxLargeScreen) {
+@media only screen and (min-width: $XXLARGE_SCREEN) {
 }

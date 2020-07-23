@@ -5,26 +5,53 @@
 //max-width 640px, small screens
 @media only screen {
   .landing {
-    &__splash {
-      align-items: center;
-      background-image: url($imagesFolderPath+"/landing_mobile.jpg");
-      background-position: center;
-      background-size: cover;
-      display: grid;
-      min-height: 94vh;
-      justify-content: center;
-      width: 100%;
-      &-text {
-        color: white;
-        font-size: $xlarge;
-        font-weight: bold;
-        padding-top: 30vh;
-        text-align: center;
-        text-transform: uppercase;
-      }
-      &-link {
-        align-self: flex-start;
-        margin: 0 auto;
+    position: relative;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: black;
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      z-index: 10;
+      width: 125%;
+      height: 25vh;
+      background-color: black;
+      border-radius: 50%;
+      transform: translateX(-50%);
+      transform-origin: bottom;
+      content: "";
+    }
+    &__title {
+      @include font-type($SEC_FONT, $LARGE, bold);
+
+      margin-top: $XXLARGE;
+      padding: 0 $SMALL;
+      color: white;
+      text-align: center;
+    }
+    &__secondary {
+      @include font-type($SEC_FONT, $MEDIUM);
+
+      max-width: $MAX_TEXT_WIDTH;
+      margin: $LARGE auto 0;
+      padding: 0 $MEDIUM;
+      color: white;
+      text-align: center;
+    }
+    &__cta {
+      @include CTA-link();
+
+      z-index: 20;
+      margin: $XXLARGE $MEDIUM 0;
+    }
+    &__section-divide {
+      height: 100px;
+      background-color: white;
+      svg {
+        display: none;
       }
     }
   }
@@ -32,27 +59,47 @@
 
 //Medium screens - TABLET
 //min-width 641px, medium screens
-@media only screen and (min-width: $mediumScreen) {
+@media only screen and (min-width: $MEDIUM_SCREEN) {
 }
 //Large screens - DESKTOP
 //min-width 1025px, large screens
-@media only screen and (min-width: $largeScreen) {
+@media only screen and (min-width: $LARGE_SCREEN) {
   .landing {
-    &__splash {
-      background-image: url($imagesFolderPath+"/landing_desktop.jpg");
-      display: grid;
-      height: 75vh;
-      justify-content: center;
+    &::after {
+      display: none;
+    }
+    &__secondary {
+      margin-right: auto;
+      margin-left: auto;
+      padding: 0;
+    }
+    &__cta {
+      margin-bottom: 0;
+    }
+    &__section-divide {
+      position: relative;
+      display: unset;
       width: 100%;
-      &-text {
-        font-size: $xxlarge;
-        padding-top: 35vh;
+      height: 200px;
+      overflow: unset;
+      background-color: unset;
+      svg {
+        position: absolute;
+        right: -50px;
+        bottom: 0;
+        left: -30px;
+        display: unset;
       }
-      &-link {
-        a {
-          font-size: $large;
-          padding: $medium $large;
-        }
+      .svg__fill {
+        z-index: 3;
+        fill: white;
+      }
+      .svg__line {
+        display: unset;
+        transform: translate(-45px, -25px) rotate(-2deg);
+        fill: transparent;
+        stroke: $MAIN_COLOR_LIGHTEN;
+        stroke-width: 2;
       }
     }
   }
@@ -60,10 +107,10 @@
 
 //XLarge screens
 //min-width 1441px, xlarge screens
-@media only screen and (min-width: $xLargeScreen) {
+@media only screen and (min-width: $XLARGE_SCREEN) {
 }
 
 //XXLarge screens
 //min-width 1921px, xlarge screens
-@media only screen and (min-width: $xxLargeScreen) {
+@media only screen and (min-width: $XXLARGE_SCREEN) {
 }
