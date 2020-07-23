@@ -42,7 +42,7 @@
       transition: transform 0.3s ease;
       &.navbar--open {
         overflow: auto;
-        transform: translateX(-100%);
+        transform: translateX(-101%);
       }
     }
     &__link {

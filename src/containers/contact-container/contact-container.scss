@@ -5,8 +5,8 @@
 @media only screen {
   .contact-container {
     min-height: $MAIN_HEIGHT;
-    padding: $MEDIUM;
-    // background-image: linear-gradient(150deg, white 0%, $MAIN_COLOR 130%);
+    padding: $LARGE $MEDIUM;
+    background-color: black;
     &__info {
       display: grid;
       gap: $MEDIUM;
@@ -22,7 +22,7 @@
     &__form {
       max-width: 624px;
       margin: 0 auto;
-      margin-top: $MEDIUM;
+      margin-top: $LARGE;
       background-color: white;
       border-radius: 5px;
       box-shadow: $BOX_SHADOW_WIDGET;

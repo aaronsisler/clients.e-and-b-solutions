@@ -43,12 +43,6 @@ const Navbar = () => {
         />
         <Hyperlink
           className="navbar__link"
-          href="/portfolio"
-          onClick={() => setMenuOpen(false)}
-          title="Portfolio"
-        />
-        <Hyperlink
-          className="navbar__link"
           href="/contact"
           onClick={() => setMenuOpen(false)}
           title="Contact"
