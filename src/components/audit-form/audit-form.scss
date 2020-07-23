@@ -7,19 +7,19 @@
   .audit-form {
     @include font-type();
 
-    padding: 0 $small;
     width: 100%;
+    padding: 0 $SMALL;
     &__form {
       display: grid;
-      grid-gap: $medium;
+      grid-gap: $MEDIUM;
       grid-template-columns: 100%;
       justify-content: center;
       width: 100%;
       &-input {
         display: grid;
-        font-size: $medium;
-        margin: 0 auto;
         width: 100%;
+        margin: 0 auto;
+        font-size: $MEDIUM;
       }
       &-message {
         @include textarea();
@@ -29,13 +29,12 @@
       }
     }
     &__email {
-      @include font-type($mainFont, $medium);
+      @include font-type($MAIN_FONT, $MEDIUM);
 
-      padding-bottom: $small;
+      padding-bottom: $SMALL;
       text-align: center;
       &--error {
-        border-bottom: $border;
-        margin-bottom: $small;
+        margin-bottom: $SMALL;
       }
     }
   }
@@ -52,7 +51,7 @@
   .audit-form {
     display: grid;
     width: 30vw;
-    padding: 0 $medium;
+    padding: 0 $MEDIUM;
   }
 }
 

@@ -7,18 +7,21 @@
   .footer {
     @include font-type();
 
-    align-items: center;
-    background-color: $darkGrey;
-    color: white;
     display: flex;
+    align-items: center;
     justify-content: space-evenly;
-    padding: $small;
+    padding: $SMALL;
+    color: white;
     text-align: center;
+    background-color: $GRAY_600;
+    &__copyright {
+      color: white;
+    }
     &__link {
       color: white;
       text-decoration: none;
       &:hover {
-        color: $lightenMainColor;
+        color: $MAIN_COLOR_LIGHTEN;
         transition: color 0.5s ease-in;
       }
     }
@@ -27,20 +30,20 @@
 
 //Medium screens - TABLET
 //min-width 641px, medium screens
-@media only screen and (min-width: $mediumScreen) {
+@media only screen and (min-width: $MEDIUM_SCREEN) {
 }
 
 //Large screens - DESKTOP
 //min-width 1025px, large screens
-@media only screen and (min-width: $largeScreen) {
+@media only screen and (min-width: $LARGE_SCREEN) {
 }
 
 //XLarge screens
 //min-width 1441px, xlarge screens
-@media only screen and (min-width: $xLargeScreen) {
+@media only screen and (min-width: $XLARGE_SCREEN) {
 }
 
 //XXLarge screens
 //min-width 1921px, xlarge screens
-@media only screen and (min-width: $xxLargeScreen) {
+@media only screen and (min-width: $XXLARGE_SCREEN) {
 }

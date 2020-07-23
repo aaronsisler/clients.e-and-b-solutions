@@ -1,10 +1,10 @@
-import { imagesFolderPath } from "../config";
+import { CDN_URL } from "../config";
 
 const team = [
   {
     image: {
       alt: "Aaron Sisler",
-      src: `${imagesFolderPath}/team_member1.jpg`
+      src: `${CDN_URL}/team_member1.jpg`
     },
     linkenInUrl: "https://www.linkedin.com/in/aaron-sisler-capm-24686b58",
     name: "Aaron Sisler",

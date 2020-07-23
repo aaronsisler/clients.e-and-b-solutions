@@ -4,32 +4,32 @@
 //Small screens - MOBILE
 @media only screen {
   .privacy-policy-container {
-    padding: $medium;
+    padding: $MEDIUM;
     &__title {
-      @include font-type($mainFont, $midlarge, bold);
+      @include font-type($MAIN_FONT, $MIDLARGE, bold);
 
-      margin-bottom: $medium;
+      margin-bottom: $MEDIUM;
     }
     &__policy-heading {
-      @include font-type($secFont, $medium);
+      @include font-type($MAIN_FONT, $MEDIUM);
 
-      margin: $medium 0 $xsmall;
+      margin: $MEDIUM 0 $XSMALL;
     }
   }
 }
 
 //Medium screens - TABLET
-@media only screen and (min-width: $mediumScreen) {
+@media only screen and (min-width: $MEDIUM_SCREEN) {
 }
 
 //Large screens - DESKTOP
-@media only screen and (min-width: $largeScreen) {
+@media only screen and (min-width: $LARGE_SCREEN) {
 }
 
 //XLarge screens
-@media only screen and (min-width: $xLargeScreen) {
+@media only screen and (min-width: $XLARGE_SCREEN) {
 }
 
 //XXLarge screens
-@media only screen and (min-width: $xxLargeScreen) {
+@media only screen and (min-width: $XXLARGE_SCREEN) {
 }
