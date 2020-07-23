@@ -12,7 +12,7 @@
     "deploy:prod": "yarn build && sls deploy && yarn clear-serverless && yarn clear-next",
     "gentempcomp": "node ./utils --isContainer=false",
     "gentempcont": "node ./utils --isContainer=true",
-    "start": "yarn clear-next && next ./src"
+    "start": "yarn clear-next && cross-env NEXT_PUBLIC_TACO=MORETACO next ./src"
   },
   "engines": {
     "node": ">=10.15.1",
@@ -48,6 +48,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.0.2",
+    "cross-env": "^7.0.2",
     "eslint": "^5.12.0",
     "eslint-config-prettier": "^3.1.0",
     "eslint-plugin-import": "^2.16.0",

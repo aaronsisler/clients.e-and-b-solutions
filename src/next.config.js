@@ -2,7 +2,12 @@ const withSass = require("@zeit/next-sass");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 const nextConfig = {
-  distDir: "../.next"
+  distDir: "../.next",
+  publicRuntimeConfig: {
+    mySecret: "clientsecret",
+    SERVICES_API_KEY2: "MORE",
+    SERVICES_API_KEY: process.env.NEXT_PUBLIC_TACO
+  }
 };
 
 const sassConfig = {

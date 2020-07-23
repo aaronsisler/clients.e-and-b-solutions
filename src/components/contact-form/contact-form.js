@@ -214,7 +214,7 @@ class ContactForm extends React.Component {
               />
               <button
                 className="contact-form__form-button"
-                disabled={isSendButtonDisabled}
+                // disabled={isSendButtonDisabled}
                 onClick={this.handleSubmitContactForm}
               >
                 {this.state.buttonText}
