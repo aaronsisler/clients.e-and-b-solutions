@@ -6,14 +6,19 @@
   .privacy-policy-container {
     padding: $MEDIUM;
     &__title {
-      @include font-type($MAIN_FONT, $MIDLARGE, bold);
+      @include font-type($MAIN_FONT, $MIDLARGE, 600);
 
       margin-bottom: $MEDIUM;
     }
     &__policy-heading {
-      @include font-type($MAIN_FONT, $MEDIUM);
+      @include font-type($MAIN_FONT, $MEDIUM, 600);
 
-      margin: $MEDIUM 0 $XSMALL;
+      margin-bottom: $XSMALL;
+    }
+    &__policy-text {
+      @include font-type($SEC_FONT, $MEDIUM);
+
+      margin-bottom: $MEDIUM;
     }
   }
 }
