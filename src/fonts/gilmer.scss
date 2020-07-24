@@ -4,8 +4,7 @@ $GILMER_CDN: $FONTS_CDN + "/gilmer";
   font-weight: bold;
   font-family: "Gilmer Bold";
   font-style: normal;
-  src:
-    url($GILMER_CDN+"/gilmer-bold.woff") format("woff"),
+  src: url($GILMER_CDN+"/gilmer-bold.woff") format("woff"),
     url($GILMER_CDN+"/gilmer-bold.woff") format("woff2");
 }
 
@@ -13,8 +12,7 @@ $GILMER_CDN: $FONTS_CDN + "/gilmer";
   font-weight: lighter;
   font-family: "Gilmer Light";
   font-style: normal;
-  src:
-    url($GILMER_CDN+"/gilmer-light.woff") format("woff"),
+  src: url($GILMER_CDN+"/gilmer-light.woff") format("woff"),
     url($GILMER_CDN+"/gilmer-light.woff") format("woff2");
 }
 
@@ -22,8 +20,7 @@ $GILMER_CDN: $FONTS_CDN + "/gilmer";
   font-weight: 500;
   font-family: "Gilmer Medium";
   font-style: normal;
-  src:
-    url($GILMER_CDN+"/gilmer-medium.woff") format("woff"),
+  src: url($GILMER_CDN+"/gilmer-medium.woff") format("woff"),
     url($GILMER_CDN+"/gilmer-medium.woff") format("woff2");
 }
 
@@ -31,7 +28,6 @@ $GILMER_CDN: $FONTS_CDN + "/gilmer";
   font-weight: normal;
   font-family: "Gilmer Regular";
   font-style: normal;
-  src:
-    url($GILMER_CDN+"/gilmer-regular.woff") format("woff"),
+  src: url($GILMER_CDN+"/gilmer-regular.woff") format("woff"),
     url($GILMER_CDN+"/gilmer-regular.woff") format("woff2");
 }

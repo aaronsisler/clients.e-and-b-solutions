@@ -6,12 +6,14 @@ import {
   SERVICES_GATEWAY_URL
 } from "../config";
 
-const headers = {
-  "Content-Type": "application/json",
-  "X-Api-Key": SERVICES_API_KEY
-};
+const createHeaders = () => {
+  const headers = {
+    "Content-Type": "application/json",
+    "X-Api-Key": SERVICES_API_KEY
+  };
 
-const emailOptions = { headers };
+  return { headers };
+};
 
 export const isEmailValid = emailAddress => validate(emailAddress);
 
@@ -19,7 +21,12 @@ export const sendEmail = async (data, done, fail) => {
   const emailData = { pointOfContactEmail: POINT_OF_CONTACT_EMAIL, ...data };
 
   try {
-    await axios.post(`${SERVICES_GATEWAY_URL}/email`, emailData, emailOptions);
+    await axios.post(
+      `${SERVICES_GATEWAY_URL}/email`,
+      emailData,
+      createHeaders()
+    );
+
     done();
   } catch (e) {
     fail();
