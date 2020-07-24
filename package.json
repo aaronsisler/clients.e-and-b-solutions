@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "npm run clear-next && next build ./src",
+    "build": "npm run clear-next && cross-env NEXT_PUBLIC_SERVICES_API_KEY=HdOvIATiEU28qyR3glui06brJdR1BCG55otFffqX next build ./src",
     "clear-next": "rm -rf ./.next",
     "clear-serverless": "rm -rf ./.serverless",
     "create-domain:beta": "sls create_domain --config=serverless.beta.yml",
@@ -47,6 +47,7 @@
   "devDependencies": {
     "@ebsolutions/generate-react-templates": "^1.0.0",
     "babel-eslint": "^10.0.2",
+    "cross-env": "^7.0.2",
     "eslint": "^6.5.1",
     "eslint-config-prettier": "^6.4.0",
     "eslint-config-react-app": "^5.0.2",

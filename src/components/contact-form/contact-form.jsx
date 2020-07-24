@@ -105,12 +105,12 @@ const ContactForm = () => {
       />
       <input
         className="contact-form__button"
-        disabled={
-          isSendButtonDisabled ||
-          !watch("name") ||
-          !watch("emailAddress") ||
-          Object.keys(errors).length
-        }
+        // disabled={
+        //   isSendButtonDisabled ||
+        //   !watch("name") ||
+        //   !watch("emailAddress") ||
+        //   Object.keys(errors).length
+        // }
         type="submit"
         value={sendButtonText}
       />

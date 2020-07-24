@@ -1,4 +1,3 @@
-import getConfig from "next/config";
 import axios from "axios";
 import { validate } from "email-validator";
 import {
@@ -7,14 +6,8 @@ import {
   SERVICES_GATEWAY_URL
 } from "../config";
 
-const { publicRuntimeConfig } = getConfig();
-
 const createHeaders = () => {
-  console.log(getConfig());
-  console.log(publicRuntimeConfig);
-  console.log(publicRuntimeConfig.SERVICES_API_KEY);
-  console.log(process.env.TACO);
-  console.log(process.env.NEXT_PUBLIC_TACO);
+  console.log(SERVICES_API_KEY);
   const headers = {
     "Content-Type": "application/json",
     "X-Api-Key": SERVICES_API_KEY
@@ -26,16 +19,16 @@ const createHeaders = () => {
 export const isEmailValid = emailAddress => validate(emailAddress);
 
 export const sendEmail = async (data, done, fail) => {
-  const emailData = { pointOfContactEmail: POINT_OF_CONTACT_EMAIL, ...data };
+  // const emailData = { pointOfContactEmail: POINT_OF_CONTACT_EMAIL, ...data };
 
   try {
     createHeaders();
 
-    await axios.post(
-      `${SERVICES_GATEWAY_URL}/email`,
-      emailData,
-      createHeaders()
-    );
+    // await axios.post(
+    //   `${SERVICES_GATEWAY_URL}/email`,
+    //   emailData,
+    //   createHeaders()
+    // );
 
     done();
   } catch (e) {
