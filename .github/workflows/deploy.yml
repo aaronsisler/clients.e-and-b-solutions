@@ -29,4 +29,5 @@ jobs:
 
       - name: Deploy
         run: npm run deploy:beta
+        env:
           NEXT_PUBLIC_SERVICES_API_KEY: ${{ secrets.NEXT_PUBLIC_SERVICES_API_KEY }}
