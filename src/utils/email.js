@@ -18,7 +18,10 @@ const createHeaders = () => {
 export const isEmailValid = emailAddress => validate(emailAddress);
 
 export const sendEmail = async (data, done, fail) => {
-  const emailData = { pointOfContactEmail: POINT_OF_CONTACT_EMAIL, ...data };
+  const emailData = {
+    pointOfContactEmail: POINT_OF_CONTACT_EMAIL,
+    ...data
+  };
 
   try {
     await axios.post(
