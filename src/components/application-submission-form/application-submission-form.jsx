@@ -56,7 +56,7 @@ const ApplicationSubmissionForm = () => {
       encodedFile,
       filename: `Application: ${name}.pdf`,
       message,
-      subject: `${CLIENT_NAME} Application from ${name}`
+      subject: `${CLIENT_NAME}: Application from ${name}`
     };
 
     const done = () => {
