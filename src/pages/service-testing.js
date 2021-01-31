@@ -1,10 +1,9 @@
 import React from "react";
-import ImageSubmissionContainer from "../containers/image-submission-container";
+import ServiceTestingContainer from "../containers/service-testing-container";
 
 const ServiceTestingPage = () => (
   <main>
-    <ImageSubmissionContainer />
-    <ImageSubmissionContainer />
+    <ServiceTestingContainer />
   </main>
 );
 
