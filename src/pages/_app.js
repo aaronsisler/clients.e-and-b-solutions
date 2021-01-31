@@ -13,6 +13,10 @@ class MyApp extends App {
       <>
         <Head>
           <title>E&amp;B Solutions</title>
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+          />
         </Head>
         <Navbar />
         <Component {...pageProps} />

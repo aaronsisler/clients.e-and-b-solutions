@@ -5,6 +5,9 @@ export const POINT_OF_CONTACT_EMAIL = "aaron.sisler@eandbsolutions.com";
 export const CDN_URL =
   "https://cdn-e-and-b-solutions.s3.amazonaws.com/e-and-b-solutions";
 
+// Client Name
+export const CLIENT_NAME = "E&B Solutions";
+
 // Google Maps
 export const CONTACT_ADDRESS = ["116 Teal Lake Dr", "Holly Springs, NC 27540"];
 export const GOOGLE_MAPS_LOCATION =

@@ -3,15 +3,29 @@
 
 //Small screens - MOBILE
 @media only screen {
-  .error-container {
+  .image-submission-form {
     display: grid;
-    flex-direction: column;
-    grid-gap: $LARGE;
-    align-items: center;
-    justify-items: center;
+    grid-gap: $MEDIUM;
     margin-top: $LARGE;
-    &__title {
-      @include font-type($MAIN_FONT, $MIDLARGE, bold);
+    &__file-upload {
+      span {
+        display: inline-block;
+        margin-top: $SMALL;
+      }
+    }
+    &__input {
+      font-size: $MEDIUM;
+    }
+    &__message {
+      @include textarea();
+    }
+    &__button {
+      @include button();
+    }
+    &__email-sent {
+      @include font-type($MAIN_FONT, $MIDLARGE);
+
+      text-align: center;
     }
   }
 }

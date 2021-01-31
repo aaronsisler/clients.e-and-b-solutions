@@ -3,25 +3,32 @@
 
 //Small screens - MOBILE
 @media only screen {
-  .error-container {
+  .image-submission-container {
     display: grid;
-    flex-direction: column;
-    grid-gap: $LARGE;
-    align-items: center;
-    justify-items: center;
-    margin-top: $LARGE;
-    &__title {
-      @include font-type($MAIN_FONT, $MIDLARGE, bold);
+    padding: $MEDIUM $MEDIUM $XLARGE;
+    p {
+      @include font-type($MAIN_FONT, $MEDIUM);
+
+      margin-bottom: $SMALL;
+      text-align: center;
     }
   }
 }
 
 //Medium screens - TABLET
 @media only screen and (min-width: $MEDIUM_SCREEN) {
+  .image-submission-container {
+    padding-right: 20%;
+    padding-left: 20%;
+  }
 }
 
 //Large screens - DESKTOP
 @media only screen and (min-width: $LARGE_SCREEN) {
+  .image-submission-container {
+    padding-right: 35%;
+    padding-left: 35%;
+  }
 }
 
 //XLarge screens

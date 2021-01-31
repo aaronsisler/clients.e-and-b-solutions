@@ -3,15 +3,22 @@
 
 //Small screens - MOBILE
 @media only screen {
-  .error-container {
-    display: grid;
-    flex-direction: column;
-    grid-gap: $LARGE;
-    align-items: center;
-    justify-items: center;
-    margin-top: $LARGE;
-    &__title {
-      @include font-type($MAIN_FONT, $MIDLARGE, bold);
+  .file-upload {
+    &__input {
+      position: absolute !important;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      border: 0;
+      clip: rect(0, 0, 0, 0);
+    }
+    &__input + label {
+      @include button();
+    }
+    &__input:focus + label {
+      box-shadow: 0 0 0 3px rgb(0, 140, 255);
     }
   }
 }
