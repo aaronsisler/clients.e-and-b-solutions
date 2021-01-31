@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
+
+import { CLIENT_NAME } from "../../config";
 import { sendEmail } from "../../utils";
 import FormError from "../../atoms/form-error";
 import Input from "../../atoms/input";
@@ -58,7 +60,8 @@ const ContactForm = () => {
       emailAddress,
       message,
       name,
-      phoneNumber
+      phoneNumber,
+      subject: `${CLIENT_NAME}: Contact Submission`
     };
 
     const done = () => {
