@@ -2,11 +2,6 @@ const withSass = require("@zeit/next-sass");
 
 const nextConfig = {
   distDir: "../.next"
-  // publicRuntimeConfig: {
-  //   SERVICES_API_KEY: process.env.NEXT_PUBLIC_SERVICES_API_KEY
-  //     ? process.env.NEXT_PUBLIC_SERVICES_API_KEY
-  //     : "NOGO"
-  // }
 };
 
 const sassConfig = {
