@@ -86,6 +86,7 @@ const ApplicationSubmissionForm = () => {
         {rawFile && <span>File Uploaded Successfully!</span>}
         <FileUpload
           buttonText="Upload Application"
+          idSuffix="application-submission-form"
           onFileUpload={handleFileUpload}
         />
       </div>

@@ -98,7 +98,11 @@ const ImageSubmissionForm = () => {
       />
       {errors.name && <FormError error={errorMessages.name} />}
       <div className="image-submission-form__file-upload">
-        <FileUpload buttonText="Upload Image" onFileUpload={handleFileUpload} />
+        <FileUpload
+          buttonText="Upload Image"
+          idSuffix="image-submission-form"
+          onFileUpload={handleFileUpload}
+        />
         {rawFile && isValidFileType && (
           <span>Image Uploaded Successfully!</span>
         )}
