@@ -3,19 +3,12 @@
 
 //Small screens - MOBILE
 @media only screen {
-  .service-testing-container {
-    padding: $SMALL;
-    div {
-      padding: $SMALL 0;
-    }
+  .authorized-check {
   }
 }
 
 //Medium screens - TABLET
 @media only screen and (min-width: $MEDIUM_SCREEN) {
-  .service-testing-container {
-    padding: $SMALL 5%;
-  }
 }
 
 //Large screens - DESKTOP
