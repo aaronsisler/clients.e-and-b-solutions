@@ -3,7 +3,7 @@
 
 //Small screens - MOBILE
 @media only screen {
-  .contact-form {
+  .contactForm {
     @include font-type();
 
     display: grid;
@@ -27,7 +27,7 @@
     &__button {
       @include CTA-link();
     }
-    &__email-sent {
+    &__emailSent {
       @include font-type($MAIN_FONT, $MIDLARGE);
 
       margin: auto;
@@ -38,14 +38,14 @@
 
 //Medium screens - TABLET
 @media only screen and (min-width: $MEDIUM_SCREEN) {
-  .contact-form {
+  .contactForm {
     min-width: 350px;
   }
 }
 
 //Large screens - DESKTOP
 @media only screen and (min-width: $LARGE_SCREEN) {
-  .contact-form {
+  .contactForm {
     min-width: 500px;
     max-width: 750px;
     &__title {

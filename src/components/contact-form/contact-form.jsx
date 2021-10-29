@@ -42,8 +42,8 @@ const ContactForm = () => {
 
   if (emailSent) {
     return (
-      <div className="contact-form">
-        <h1 className="contact-form__email-sent">
+      <div className={styles.contactForm}>
+        <h1 className={styles.contactForm__emailSent}>
           Thank you for reaching out!
           <br />
           We are excited to get back in touch with you.
@@ -76,8 +76,8 @@ const ContactForm = () => {
   };
 
   return (
-    <form className="contact-form" onSubmit={handleSubmit(onSubmit)}>
-      <h1 className="contact-form__title">Send a message</h1>
+    <form className={styles.contactForm} onSubmit={handleSubmit(onSubmit)}>
+      <h1 className={styles.contactForm__title}>Send a message</h1>
       <Input
         hasError={Boolean(errors.name)}
         label="Name"
@@ -100,14 +100,14 @@ const ContactForm = () => {
       />
       {errors.phoneNumber && <FormError error={errorMessages.phoneNumber} />}
       <textarea
-        className="contact-form__message"
+        className={styles.contactForm__message}
         name="message"
         placeholder="What's on your mind?"
         ref={register}
         rows="4"
       />
       <input
-        className="contact-form__button"
+        className={styles.contactForm__button}
         disabled={
           isSendButtonDisabled ||
           !watch("name") ||
