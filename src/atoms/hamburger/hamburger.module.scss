@@ -1,6 +1,6 @@
 @import "../../styles/variables.scss";
 
-//Small screens - MOBILE
+// Small screens - MOBILE
 @media only screen {
   .hamburger {
     &__line {
@@ -24,18 +24,18 @@
   }
 }
 
-//Medium screens - TABLET
+// Medium screens - TABLET
 @media only screen and (min-width: $MEDIUM_SCREEN) {
 }
 
-//Large screens - DESKTOP
+// Large screens - DESKTOP
 @media only screen and (min-width: $LARGE_SCREEN) {
 }
 
-//XLarge screens
+// XLarge screens
 @media only screen and (min-width: $XLARGE_SCREEN) {
 }
 
-//XXLarge screens
+// XXLarge screens
 @media only screen and (min-width: $XXLARGE_SCREEN) {
 }
