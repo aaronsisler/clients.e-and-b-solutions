@@ -6,7 +6,7 @@ import styles from "./external-link.module.scss";
 
 const ExternalLink = ({ className, href, onClick, title }) => (
   <a
-    className={cn(styles.external_link, className)}
+    className={cn(styles.externalLink, className)}
     onClick={onClick}
     href={href}
     target="_blank"

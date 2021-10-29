@@ -3,22 +3,20 @@
 
 //Small screens - MOBILE
 @media only screen {
-  .file-upload {
-    &__input {
-      position: absolute !important;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      overflow: hidden;
-      white-space: nowrap;
-      border: 0;
-      clip: rect(0, 0, 0, 0);
+  .aboutUs {
+    padding: 0 $MEDIUM $XLARGE;
+    &__title {
+      @include font-type($SEC_FONT, $LARGE, bold, rgba-with-var(black, 0.8));
+
+      margin-top: $XLARGE;
+      text-align: center;
     }
-    &__input + label {
-      @include button();
-    }
-    &__input:focus + label {
-      box-shadow: 0 0 0 3px rgb(0, 140, 255);
+    &__text {
+      @include font-type($SEC_FONT, $MEDIUM, 400, rgba-with-var(black, 0.8));
+
+      max-width: $MAX_TEXT_WIDTH;
+      margin: $LARGE auto 0;
+      text-align: center;
     }
   }
 }

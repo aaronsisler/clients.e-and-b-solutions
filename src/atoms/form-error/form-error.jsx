@@ -6,9 +6,9 @@ import { faExclamationCircle } from "@fortawesome/free-solid-svg-icons/faExclama
 import styles from "./form-error.module.scss";
 
 const FormError = ({ error }) => (
-  <div className={styles.form_error}>
+  <div className={styles.formError}>
     <FontAwesomeIcon
-      className={styles.form_error__icon}
+      className={styles.formError__icon}
       icon={faExclamationCircle}
     />
     &nbsp;&nbsp;{error}

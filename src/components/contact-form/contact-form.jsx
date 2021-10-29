@@ -7,7 +7,7 @@ import { sendEmail } from "../../utils";
 import FormError from "../../atoms/form-error";
 import Input from "../../atoms/input";
 
-import "./contact-form.scss";
+import styles from "./contact-form.module.scss";
 
 const errorMessages = {
   emailAddress: "Please enter a valid email address",

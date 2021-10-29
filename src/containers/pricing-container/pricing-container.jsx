@@ -1,7 +1,7 @@
 import React from "react";
 import Hyperlink from "../../atoms/hyperlink";
 
-import "./pricing-container.scss";
+import styles from "./pricing-container.module.scss";
 
 class PricingContainer extends React.Component {
   constructor(props) {

@@ -2,7 +2,7 @@ import React from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
 
-import "./image.scss";
+import styles from "./image.scss";
 
 const Image = ({ altText, className, src }) => (
   <img className={cn("image", className)} src={src} alt={altText} />

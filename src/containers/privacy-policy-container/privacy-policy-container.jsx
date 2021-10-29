@@ -1,7 +1,7 @@
 import React from "react";
 import privacyPolicy from "../../content/privacy-policy";
 
-import "./privacy-policy-container.scss";
+import styles from "./privacy-policy-container.module.scss";
 
 const PrivacyPolicyContainer = () => (
   <div className="privacy-policy-container">
