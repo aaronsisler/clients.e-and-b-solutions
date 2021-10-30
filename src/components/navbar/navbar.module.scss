@@ -35,14 +35,14 @@
       z-index: 9001;
       display: flex;
       flex-direction: column;
-      width: 100%;
+      width: 101%;
       height: 100%;
       padding-top: $XXLARGE;
       background-color: $MAIN_COLOR_DARKEN;
       transition: transform 0.3s ease;
-      &.navbar--open {
+      &.navbar__open {
         overflow: auto;
-        transform: translateX(-101%);
+        transform: translateX(-100%);
       }
     }
     &__link {

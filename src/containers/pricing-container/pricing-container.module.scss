@@ -3,7 +3,7 @@
 
 //Small screens - MOBILE
 @media only screen {
-  .pricing-container {
+  .pricingContainer {
     display: grid;
     flex: 1 1 auto;
     grid-gap: $MIDLARGE;
@@ -22,12 +22,12 @@
       border-radius: $XXSMALL;
       .package {
         &__header {
-          &-title {
+          &Title {
             @include font-type($MAIN_FONT, $MIDLARGE, bold);
 
             margin-bottom: $MIDLARGE;
           }
-          &-content {
+          &Content {
             @include font-type($MAIN_FONT);
 
             color: $GRAY_400;
@@ -53,14 +53,14 @@
 
 //Medium screens - TABLET
 @media only screen and (min-width: $MEDIUM_SCREEN) {
-  .pricing-container {
+  .pricingContainer {
     padding: $MIDLARGE 20%;
   }
 }
 
 //Large screens - DESKTOP
 @media only screen and (min-width: $LARGE_SCREEN) {
-  .pricing-container {
+  .pricingContainer {
     grid-template-columns: 1fr 1fr;
     padding: $XLARGE 20%;
   }
