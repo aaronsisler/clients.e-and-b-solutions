@@ -9,10 +9,16 @@ const Input = ({ hasError, label, name, refProp }) => (
     <input name={name} ref={refProp} type="text" />
     <label
       htmlFor={name}
-      className={cn(styles.input__label, hasError ? "input__label--error" : "")}
+      className={cn(
+        styles.input__label,
+        hasError ? styles.input__labelError : ""
+      )}
     >
       <span
-        className={cn(styles.input__span, hasError ? "input__span--error" : "")}
+        className={cn(
+          styles.input__span,
+          hasError ? styles.input__labelSpan : ""
+        )}
       >
         {label}
       </span>

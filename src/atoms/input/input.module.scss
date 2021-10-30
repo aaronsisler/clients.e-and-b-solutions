@@ -33,7 +33,7 @@
         transition: transform 0.3s ease;
         content: "";
       }
-      &--error {
+      &Error {
         color: lighten(darkred, 15);
         border-bottom: 3px solid lighten(darkred, 15);
         &::after {
@@ -55,7 +55,7 @@
 
         color: $MAIN_COLOR;
         transform: translateY(-200%);
-        &--error {
+        &Error {
           color: lighten(darkred, 15);
         }
       }
