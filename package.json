@@ -15,7 +15,8 @@
     "gen:comp": "node ./node_modules/@ebsolutions/generate-react-templates --type=COMP",
     "gen:cont": "node ./node_modules/@ebsolutions/generate-react-templates --type=CONT",
     "gen:page": "node ./node_modules/@ebsolutions/generate-react-templates --type=PAGE",
-    "lint": "eslint \"./**/*.js\"",
+    "lint": "eslint \"./**/*.{js,jsx}\"",
+    "lint1": "eslint \"./**/*.js\"",
     "lint:style": "node ./node_modules/stylelint/bin/stylelint.js \"**/*.{css,scss}\""
   },
   "engines": {
@@ -37,7 +38,6 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-hook-form": "^4.7.2",
-    "react-modal": "^3.8.1",
     "serverless-apigw-binary": "^0.4.4",
     "serverless-domain-manager": "^4.2.0",
     "serverless-http": "^1.6.0",
@@ -45,18 +45,9 @@
   },
   "devDependencies": {
     "@ebsolutions/generate-react-templates": "^1.6.0",
-    "babel-eslint": "^10.0.2",
     "cross-env": "^7.0.2",
-    "eslint": "^7.32.0",
-    "eslint-config-prettier": "^6.4.0",
-    "eslint-config-react-app": "^5.0.2",
-    "eslint-plugin-flowtype": "^4.3.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-prettier": "^3.1.1",
-    "eslint-plugin-react": "^7.16.0",
-    "eslint-plugin-react-hooks": "^2.2.0",
-    "file-loader": "^4.2.0",
+    "eslint": "^8.1.0",
+    "eslint-config-next": "12.0.1",
     "husky": "^3.0.9",
     "lint-staged": "^9.4.2",
     "prettier": "^1.18.2",
@@ -65,8 +56,6 @@
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-config-standard": "^19.0.0",
     "stylelint-config-standard-scss": "^2.0.0",
-    "stylelint-order": "^3.1.1",
-    "url-loader": "^2.1.0",
-    "webpack": "^4.39.2"
+    "stylelint-order": "^3.1.1"
   }
 }
