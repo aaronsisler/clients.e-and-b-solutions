@@ -43,5 +43,20 @@
     "serverless-domain-manager": "^4.2.0",
     "serverless-http": "^1.6.0",
     "yup": "^0.28.1"
+  },
+  "devDependencies": {
+    "@ebsolutions/generate-react-templates": "^1.6.0",
+    "cross-env": "^7.0.2",
+    "eslint": "^8.1.0",
+    "eslint-config-next": "12.0.1",
+    "husky": "^3.0.9",
+    "lint-staged": "^9.4.2",
+    "prettier": "^1.18.2",
+    "serverless": "^2.46.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^19.0.0",
+    "stylelint-config-standard-scss": "^2.0.0",
+    "stylelint-order": "^3.1.1"
   }
 }
