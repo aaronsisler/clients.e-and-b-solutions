@@ -27,7 +27,7 @@ jobs:
 
       - name: Build
         run: npm run build
-      - name: Deploy
+      # - name: Deploy
       #   run: npx serverless deploy --config ./deployment/serverless.beta.yml
       #   env:
       #     AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
