@@ -1,4 +1,5 @@
 ebSolutions:
   component: "@sls-next/serverless-component@3.5.3-alpha.4"
   inputs:
-    domain: ["beta", "otterandcow.com"]
+    bucketName: "e-and-b-solutions-prod"
+    domain: ["eandbsolutions.com"]
