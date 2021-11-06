@@ -5,7 +5,7 @@ name: Deploy
 
 on:
   pull_request:
-    branches: [main]
+    branches: [mainxy]
 
 jobs:
   Publish:
@@ -22,9 +22,12 @@ jobs:
       - name: Install dependencies
         run: npm ci --production
 
+      - name: Install Serverless Framework
+        run: npm install -g serverless
+
       - name: Build && Deploy
-        run: npm run deploy:github:beta && serverless
+        run: npm run deploy:github:prod && serverless
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          DEPLOY_ENV: beta
+          DEPLOY_ENV: prod

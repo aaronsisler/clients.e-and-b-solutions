@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "deploy:github:beta": "export DEPLOY_ENV=beta && node ./deploy/deployment.js",
-    "deploy:github:prod": "export DEPLOY_ENV=prod && node ./deploy/deployment.js",
+    "deploy:github:beta": "node ./deploy/deployment.js",
+    "deploy:github:prod": "node ./deploy/deployment.js",
     "prebuild": "npm run clear:next",
     "build": "next build ./src",
     "clear:next": "rm -rf ./.next",
