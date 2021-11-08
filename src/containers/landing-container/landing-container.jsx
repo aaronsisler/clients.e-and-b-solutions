@@ -2,10 +2,10 @@ import React from "react";
 import Landing from "../../components/landing";
 import AboutUs from "../../components/about-us";
 
-import "./landing-container.scss";
+import styles from "./landing-container.module.scss";
 
 const LandingContainer = () => (
-  <div className="landing-container">
+  <div className={styles.landingContainer}>
     <Landing />
     <AboutUs />
   </div>

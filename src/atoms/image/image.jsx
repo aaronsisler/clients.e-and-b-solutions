@@ -1,17 +1,19 @@
 import React from "react";
+import Image from "next/image";
 import cn from "classnames";
+
 import PropTypes from "prop-types";
 
-import "./image.scss";
+import styles from "./image.module.scss";
 
-const Image = ({ altText, className, src }) => (
-  <img className={cn("image", className)} src={src} alt={altText} />
+const ImageAtom = ({ altText, className, src }) => (
+  <Image className={cn(styles.image, className)} src={src} alt={altText} />
 );
 
-Image.propTypes = {
+ImageAtom.propTypes = {
   altText: PropTypes.string.isRequired,
   className: PropTypes.string,
   src: PropTypes.string.isRequired
 };
 
-export default Image;
+export default ImageAtom;

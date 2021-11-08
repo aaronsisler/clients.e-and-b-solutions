@@ -1,6 +1,7 @@
 import React from "react";
 /* eslint-disable max-len */
-export default {
+
+const privacyPolicyContent = {
   companyWebsite: "eandbsolutions.com",
   policies: [
     {
@@ -281,3 +282,5 @@ export default {
     { isBold: true, text: "aaron.sisler@eandbsolutions.com" }
   ]
 };
+
+export default privacyPolicyContent;

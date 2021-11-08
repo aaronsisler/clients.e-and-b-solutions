@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./landing-svg.scss";
+import styles from "./landing-svg.module.scss";
 
 const LandingSvg = ({ classname }) => (
   <svg className={`${classname}`} viewBox="0 0 1440 120">

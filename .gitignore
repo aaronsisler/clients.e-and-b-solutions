@@ -4,6 +4,7 @@
 # build/production folders
 .next/
 .serverless/
+/.serverless_nextjs
 
 # local error files
 npm-debug.log*
