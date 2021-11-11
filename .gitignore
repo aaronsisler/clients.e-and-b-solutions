@@ -5,6 +5,8 @@
 .next/
 .serverless/
 /.serverless_nextjs
+/.next-tf/
+/.terraform/
 
 # local error files
 npm-debug.log*
