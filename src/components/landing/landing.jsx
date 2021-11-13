@@ -6,7 +6,7 @@ import styles from "./landing.module.scss";
 
 const Landing = () => (
   <div className={styles.landing}>
-    <h1 className={styles.landing__title}>Technology made easy</h1>
+    <h1 className={styles.landing__title}>Technology made easy1</h1>
     <p className={styles.landing__secondary}>
       Running a business is hectic enough. Let us worry about building and
       keeping your site up to date.
