@@ -11,6 +11,8 @@ jobs:
   Publish:
     runs-on: ubuntu-latest
     steps:
+      - uses: hashicorp/setup-terraform@v1
+
       - name: Checkout
         uses: actions/checkout@v2
 
@@ -26,5 +28,4 @@ jobs:
         run: npm run tf-next
 
       - name: Terraform Init
-        uses: hashicorp/setup-terraform@v1
         run: terraform init
