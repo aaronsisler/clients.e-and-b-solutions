@@ -90,7 +90,7 @@ module "tf_next" {
   cloudfront_acm_certificate_arn = module.cloudfront_cert.acm_certificate_arn
 
   deployment_name = "e-and-b-solutions-${var.env_name}"
-  next_tf_dir = "../.next-tf"
+  next_tf_dir = "../../.next-tf"
   providers = {
     aws.global_region = aws.global_region
   }
