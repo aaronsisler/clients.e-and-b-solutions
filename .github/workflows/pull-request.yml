@@ -5,7 +5,7 @@ name: Deploy
 
 on:
   pull_request:
-    branches: [mainxy]
+    branches: [main]
 
 jobs:
   Publish:
@@ -20,4 +20,7 @@ jobs:
           node-version: 12
 
       - name: Install dependencies
-        run: npm ci --production
+        run: npm run tf-next
+      # - name: Terraform
+      # uses: hashicorp/setup-terraform@v1
+      # run: terraform init
