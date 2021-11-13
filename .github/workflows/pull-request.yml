@@ -19,11 +19,12 @@ jobs:
         with:
           node-version: 12
 
-      - name: Install dependencies
+      - name: Global Install tf-next
         run: npm install -g tf-next
 
       - name: Install dependencies
         run: npm run tf-next
-      # - name: Terraform
-      # uses: hashicorp/setup-terraform@v1
-      # run: terraform init
+
+      - name: Terraform Init
+        uses: hashicorp/setup-terraform@v1
+        run: terraform init
