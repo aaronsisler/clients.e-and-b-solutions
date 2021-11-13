@@ -5,7 +5,9 @@
   "scripts": {
     "tf-next": "tf-next build ./src",
     "dev": "next ./src",
-    "deploy:prod": "npm run build && sls deploy --config ./deployment/serverless.prod.yml && npm run clear:serverless && npm run clear:next",
+    "beta:deploy": "cd deployment && terraform apply -auto-approve -var-file=./beta.tfvars",
+    "beta:destroy": "cd deployment && terraform destroy -auto-approve -var-file=./beta.tfvars",
+    "beta:plan": "cd deployment && terraform plan -var-file=./beta.tfvars",
     "gen:comp": "node ./node_modules/@ebsolutions/generate-react-templates --type=COMP",
     "gen:cont": "node ./node_modules/@ebsolutions/generate-react-templates --type=CONT",
     "gen:page": "node ./node_modules/@ebsolutions/generate-react-templates --type=PAGE",

@@ -10,32 +10,14 @@ terraform {
 # Main region where the resources should be created in
 # Should be close to the location of your viewers
 provider "aws" {
-  region = "us-east-1"
+  region = var.region
 }
 
 # Provider used for creating the Lambda@Edge function which must be deployed
 # to us-east-1 region (Should not be changed)
 provider "aws" {
   alias  = "global_region"
-  region = "us-east-1"
-}
-
-###########
-# Variables
-###########
-
-variable "custom_domain" {
-  description = "Your custom domain"
-  type        = string
-  default     = "beta.eandbsolutions.com"
-}
-
-# Assuming that the ZONE of your domain is already registrated in your AWS account (Route 53)
-# https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/AboutHZWorkingWith.html
-variable "custom_domain_zone_name" {
-  description = "The Route53 zone name of the custom domain"
-  type        = string
-  default     = "eandbsolutions.com."
+  region = var.region
 }
 
 ###########
@@ -54,7 +36,7 @@ locals {
 
 # Get the hosted zone for the custom domain
 data "aws_route53_zone" "custom_domain_zone" {
-  name = var.custom_domain_zone_name
+  name = var.hosted_zone
 }
 
 # Create a new record in Route 53 for the domain
@@ -107,7 +89,8 @@ module "tf_next" {
   cloudfront_aliases             = local.aliases
   cloudfront_acm_certificate_arn = module.cloudfront_cert.acm_certificate_arn
 
-  deployment_name = "e-and-b-solutions-beta"
+  deployment_name = "e-and-b-solutions-${var.env_name}"
+  next_tf_dir = "../.next-tf"
   providers = {
     aws.global_region = aws.global_region
   }
