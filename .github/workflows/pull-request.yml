@@ -28,12 +28,10 @@ jobs:
         run: npm run tf-next
 
       - name: Terraform Init
-        run: terraform init
-        working-directory: ./deployment
+        run: terraform init -chdir=./deployment
 
       - name: Terraform Plan
-        run: terraform plan -auto-approve -var-file=./beta.tfvars
-        working-directory: ./deployment
+        run: terraform plan -auto-approve -chdir=./deployment -var-file=./beta.tfvars
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
