@@ -28,7 +28,7 @@ jobs:
         run: npm run tf-next
 
       - name: Terraform Init
-        run: terraform init -auto-approve -var-file=./beta.tfvars
+        run: terraform init
         working-directory: ./deployment
 
       - name: Terraform Plan
