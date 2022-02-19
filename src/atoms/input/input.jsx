@@ -4,9 +4,9 @@ import cn from "classnames";
 
 import styles from "./input.module.scss";
 
-const Input = ({ hasError, label, name, refProp }) => (
+const Input = ({ hasError, label, name, registerProp }) => (
   <div className={styles.input}>
-    <input name={name} ref={refProp} type="text" />
+    <input name={name} {...registerProp(name)} type="text" />
     <label
       htmlFor={name}
       className={cn(
@@ -30,7 +30,7 @@ Input.propTypes = {
   hasError: PropTypes.bool,
   label: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  refProp: PropTypes.func.isRequired
+  registerProp: PropTypes.func.isRequired,
 };
 
 export default Input;
