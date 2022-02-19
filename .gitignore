@@ -1,15 +1,18 @@
 # dependencies
 /node_modules
 
+# secrets
+.env
+
 # build/production folders
 .next/
-.serverless/
-/.serverless_nextjs
-/.next-tf/
-**/.next-tf/
-/.terraform/
+build/
+**/build/
+dist/
+**/dist/
 **/.terraform/
 
-# local error files
+# local files
 npm-debug.log*
 sh.exe.stackdump
+**/.DS_Store

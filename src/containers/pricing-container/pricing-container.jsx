@@ -7,7 +7,7 @@ class PricingContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isModalOpen: false
+      isModalOpen: false,
     };
   }
 
@@ -20,11 +20,11 @@ class PricingContainer extends React.Component {
               Simple Yet Effective
             </div>
             <div className={styles.package__headerContent}>
-              We will build you a custom website and host it ($100 value) for
+              We will build you a custom website and host it ($125 value) for
               the first year for free.
             </div>
           </div>
-          <div className={styles.package__cost}>$250</div>
+          <div className={styles.package__cost}>$350</div>
           <div className={styles.package__content}>
             <p>Up to 5 pages</p>
             <p>Support and maintenance costs</p>
@@ -46,7 +46,7 @@ class PricingContainer extends React.Component {
               from you with ease.
             </div>
           </div>
-          <div className={styles.package__cost}>$500</div>
+          <div className={styles.package__cost}>$600</div>
           <div className={styles.package__content}>
             <p>Shopping Cart and Payments</p>
             <p>Support and maintenance costs</p>
