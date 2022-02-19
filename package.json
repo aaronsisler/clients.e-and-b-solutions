@@ -3,57 +3,46 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "tf-next": "tf-next build ./src",
+    "prebuild": "rm -rf ./build && rm -rf ./dist",
+    "build": "next build ./src && next export -o dist ./src",
     "dev": "next ./src",
-    "beta:init": "cd deployment/beta && terraform init",
-    "beta:deploy": "cd deployment/beta && terraform apply -auto-approve -var-file=./beta.tfvars",
-    "beta:destroy": "cd deployment/beta && terraform destroy -auto-approve -var-file=./beta.tfvars",
-    "beta:plan": "cd deployment/beta && terraform plan -var-file=./beta.tfvars",
-    "prod:init": "cd deployment/prod && terraform init",
-    "prod:deploy": "cd deployment/prod && terraform apply -auto-approve -var-file=./prod.tfvars",
-    "prod:destroy": "cd deployment/prod && terraform destroy -auto-approve -var-file=./prod.tfvars",
-    "prod:plan": "cd deployment/prod && terraform plan -var-file=./prod.tfvars",
+    "deploy:beta": "aws s3 sync ./dist s3://beta.eandbsolutions.com --delete",
+    "deploy:prod": "aws s3 sync ./dist s3://eandbsolutions.com --delete",
+    "lint": "eslint \"./**/*.{js,jsx}\"",
     "gen:comp": "node ./node_modules/@ebsolutions/generate-react-templates --type=COMP",
     "gen:cont": "node ./node_modules/@ebsolutions/generate-react-templates --type=CONT",
-    "gen:page": "node ./node_modules/@ebsolutions/generate-react-templates --type=PAGE",
-    "lint": "eslint \"./**/*.{js,jsx}\"",
-    "lint:style": "node ./node_modules/stylelint/bin/stylelint.js \"**/*.{css,scss}\""
+    "gen:page": "node ./node_modules/@ebsolutions/generate-react-templates --type=PAGE"
   },
   "engines": {
-    "node": ">=12.0.0"
+    "node": ">=14.0.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.17",
     "@fortawesome/free-brands-svg-icons": "^5.8.1",
     "@fortawesome/free-solid-svg-icons": "^5.8.1",
     "@fortawesome/react-fontawesome": "^0.1.4",
+    "@hookform/resolvers": "2.8.3",
     "axios": "^0.21.4",
     "classnames": "^2.2.6",
     "email-validator": "^2.0.3",
-    "express": "^4.16.4",
     "next": "^12.0.3",
-    "normalize-scss": "^7.0.1",
     "prop-types": "^15.6.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-hook-form": "^4.7.2",
+    "react-hook-form": "^7.20.2",
     "sass": "^1.43.4",
-    "serverless-http": "^1.6.0",
-    "yup": "^0.28.1"
+    "yup": "^0.32.11"
   },
   "devDependencies": {
-    "@ebsolutions/generate-react-templates": "^1.6.0",
-    "cross-env": "^7.0.2",
+    "@ebsolutions/generate-react-templates": "^1.7.0",
     "eslint": "^7.32.0",
     "eslint-config-next": "12.0.1",
     "husky": "^7.0.4",
-    "lint-staged": "^9.4.2",
-    "prettier": "^1.18.2",
-    "stylelint": "^13.13.1",
+    "prettier": "^2.4.1",
+    "stylelint": "^14.1.0",
     "stylelint-config-rational-order": "^0.1.2",
-    "stylelint-config-standard": "^19.0.0",
-    "stylelint-config-standard-scss": "^2.0.0",
-    "stylelint-order": "^3.1.1",
-    "tf-next": "^0.10.1"
+    "stylelint-config-standard": "^24.0.0",
+    "stylelint-config-standard-scss": "^3.0.0",
+    "stylelint-order": "^5.0.0"
   }
 }
