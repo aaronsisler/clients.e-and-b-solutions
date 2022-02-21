@@ -6,6 +6,7 @@
     "prebuild": "rm -rf ./build && rm -rf ./dist",
     "build": "next build ./src && next export -o dist ./src",
     "dev": "next ./src",
+    "deploy": "serverless --aws-profile default",
     "deploy:beta": "aws s3 sync ./dist s3://beta.eandbsolutions.com --delete",
     "deploy:prod": "aws s3 sync ./dist s3://eandbsolutions.com --delete",
     "lint": "eslint \"./**/*.{js,jsx}\"",

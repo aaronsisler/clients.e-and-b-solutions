@@ -1,0 +1,8 @@
+prodEandbSolutions:
+  component: "@sls-next/serverless-component@3.6.0"
+  inputs:
+    domain: ["eandbsolutions.com"] # [ sub-domain, domain ]
+    cloudfront:
+      certificate:
+        cloudFrontDefaultCertificate: false # specify false and one of IAM/ACM certificates, or specify true and omit IAM/ACM inputs for default certificate
+        acmCertificateArn: "arn:aws:acm:us-east-1:654918520080:certificate/24db7d13-c130-461d-9813-4acc2fffcf4a"
