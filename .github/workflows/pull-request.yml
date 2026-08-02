@@ -29,6 +29,8 @@ jobs:
 
       - name: Build and Export Static files
         run: npm run build
+        env:
+          DEPLOYED_ENVIRONMENT: beta
 
       - name: Deploy to Beta
         run: aws s3 sync ./dist s3://beta.eandbsolutions.com --delete
