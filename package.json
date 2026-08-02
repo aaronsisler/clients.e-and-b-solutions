@@ -2,6 +2,9 @@
   "name": "clients.e-and-b-solutions",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": ">=24.0.0"
+  },
   "scripts": {
     "prebuild": "rm -rf ./build && rm -rf ./dist",
     "build": "next build ./src && next export -o dist ./src",
@@ -12,9 +15,6 @@
     "gen:comp": "node ./node_modules/@ebsolutions/generate-react-templates --type=COMP",
     "gen:cont": "node ./node_modules/@ebsolutions/generate-react-templates --type=CONT",
     "gen:page": "node ./node_modules/@ebsolutions/generate-react-templates --type=PAGE"
-  },
-  "engines": {
-    "node": ">=14.0.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.17",
