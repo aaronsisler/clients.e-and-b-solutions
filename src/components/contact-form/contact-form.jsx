@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
 import { CLIENT_NAME } from "../../config";
+import { HONEYPOT_INPUT_FIELD_NAMES } from "../../constants";
 import { sendEmail } from "../../utils";
 import FormError from "../../atoms/form-error";
 import Input from "../../atoms/input";
@@ -25,7 +26,7 @@ const contactSchema = yup.object().shape({
       "is-phone-number",
       errorMessages.phoneNumber,
       (value) =>
-        value.trim() === "" || (value.match(/^[0-9]*$/) && value.length === 10)
+        value.trim() === "" || (value.match(/^[0-9]*$/) && value.length === 10),
     ),
 });
 
@@ -42,8 +43,10 @@ const ContactForm = () => {
     register,
     handleSubmit,
     watch,
+    getValues,
     formState: { errors },
   } = useForm(useFormOptions);
+  const formLoadedAt = useRef(Date.now());
 
   if (emailSent) {
     return (
@@ -61,20 +64,28 @@ const ContactForm = () => {
     setIsSendButtonDisabled(true);
     setSendButtonText("Sending");
 
+    const done = () => setEmailSent(true);
+    const fail = () => {
+      setSendButtonText("Please try again");
+      setIsSendButtonDisabled(false);
+    };
+
+    const isBotSubmission = HONEYPOT_INPUT_FIELD_NAMES.some((fieldName) =>
+      Boolean(getValues(fieldName)),
+    );
+
+    if (isBotSubmission) {
+      done();
+      return;
+    }
+
     const formData = {
+      elapsedFormTimeMs: Date.now() - formLoadedAt.current,
       emailAddress,
       message,
       name,
       phoneNumber,
       subject: `${CLIENT_NAME}: Contact Submission`,
-    };
-
-    const done = () => {
-      setEmailSent(true);
-    };
-    const fail = () => {
-      setSendButtonText("Please try again");
-      setIsSendButtonDisabled(false);
     };
 
     sendEmail(formData, done, fail);
@@ -83,6 +94,18 @@ const ContactForm = () => {
   return (
     <form className={styles.contactForm} onSubmit={handleSubmit(onSubmit)}>
       <h1 className={styles.contactForm__title}>Send a message</h1>
+      <div className={styles.contactForm__honeypot} aria-hidden="true">
+        {HONEYPOT_INPUT_FIELD_NAMES.map((fieldName) => (
+          <input
+            key={fieldName}
+            autoComplete="off"
+            name={fieldName}
+            tabIndex="-1"
+            type="text"
+            {...register(fieldName)}
+          />
+        ))}
+      </div>
       <Input
         hasError={Boolean(errors?.name)}
         label="Name"

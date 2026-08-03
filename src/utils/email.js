@@ -3,27 +3,31 @@ import { validate } from "email-validator";
 import {
   CLIENT_NAME,
   POINT_OF_CONTACT_EMAIL,
-  SERVICES_GATEWAY_URL
+  SERVICES_GATEWAY_URL,
 } from "../config";
 
 const headers = {
   "Content-Type": "application/json",
-  "api-version": 2.0
+  "api-version": 2.0,
 };
 
 const emailOptions = { headers };
 
-export const isEmailValid = emailAddress => validate(emailAddress);
+export const isEmailValid = (emailAddress) => validate(emailAddress);
 
 export const sendEmail = async (data, done, fail) => {
   const emailData = {
     clientName: CLIENT_NAME,
     pointOfContactEmail: POINT_OF_CONTACT_EMAIL,
-    ...data
+    ...data,
   };
 
   try {
-    await axios.post(`${SERVICES_GATEWAY_URL}/email`, emailData, emailOptions);
+    await axios.post(
+      `${SERVICES_GATEWAY_URL}/email/v2`,
+      emailData,
+      emailOptions,
+    );
     done();
   } catch (e) {
     fail();
@@ -33,14 +37,14 @@ export const sendEmail = async (data, done, fail) => {
 export const sendEmailWithAttachment = async (data, done, fail) => {
   const emailData = {
     pointOfContactEmail: POINT_OF_CONTACT_EMAIL,
-    ...data
+    ...data,
   };
 
   try {
     await axios.post(
-      `${SERVICES_GATEWAY_URL}/email-with-attachment`,
+      `${SERVICES_GATEWAY_URL}/email-with-attachment/v2`,
       emailData,
-      emailOptions
+      emailOptions,
     );
     done();
   } catch (e) {

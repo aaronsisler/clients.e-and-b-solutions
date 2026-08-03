@@ -4,6 +4,9 @@
 # secrets
 .env
 
+# Development
+.claude/
+
 # build/production folders
 .next/
 build/
