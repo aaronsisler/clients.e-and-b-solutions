@@ -17,6 +17,4 @@ export const GOOGLE_MAPS_LOCATION =
 export const CONTACT_PHONE_NUMBER = "(910) 603-0899";
 
 // Services Gateway
-export const SERVICES_GATEWAY_URL =
-  `https://services.eandbsolutions.com/${process.env.DEPLOYED_ENVIRONMENT}` ||
-  "https://services.eandbsolutions.com/prod";
+export const SERVICES_GATEWAY_URL = `https://services.eandbsolutions.com/${process.env.NEXT_PUBLIC_DEPLOYED_ENVIRONMENT}`;
