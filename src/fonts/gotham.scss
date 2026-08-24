@@ -1,3 +1,5 @@
+@use "../styles/variables" as *;
+
 $GOTHAM_CDN: $FONTS_CDN + "/gotham";
 
 @font-face {

@@ -1,6 +1,6 @@
-@import "./variables";
-@import "./fonts";
-@import "./mixins";
+@use "./variables" as *;
+@use "./fonts";
+@use "./mixins" as *;
 
 //Small screens - MOBILE
 //max-width 640px, small screens
