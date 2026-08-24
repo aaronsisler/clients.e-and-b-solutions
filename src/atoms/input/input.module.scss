@@ -1,5 +1,6 @@
-@import "../../styles/variables.scss";
-@import "../../styles/mixins.scss";
+@use "sass:color";
+@import "../../styles/variables";
+@import "../../styles/mixins";
 
 //Small screens - MOBILE
 @media only screen {
@@ -34,10 +35,10 @@
         content: "";
       }
       &Error {
-        color: lighten(darkred, 15);
-        border-bottom: 3px solid lighten(darkred, 15);
+        color: color.adjust(darkred, $lightness: 15%);
+        border-bottom: 3px solid color.adjust(darkred, $lightness: 15%);
         &::after {
-          border-bottom: 3px solid lighten(darkred, 15);
+          border-bottom: 3px solid color.adjust(darkred, $lightness: 15%);
           content: "";
         }
       }
@@ -56,7 +57,7 @@
         color: $MAIN_COLOR;
         transform: translateY(-200%);
         &Error {
-          color: lighten(darkred, 15);
+          color: color.adjust(darkred, $lightness: 15%);
         }
       }
       &:focus + .input__label::after,

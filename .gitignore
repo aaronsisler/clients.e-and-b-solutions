@@ -4,12 +4,15 @@
 # secrets
 .env
 
+# Development
+.claude/
+src/AGENTS.md
+src/CLAUDE.md
+
 # build/production folders
 .next/
 build/
 **/build/
-dist/
-**/dist/
 **/.terraform/
 
 # local files

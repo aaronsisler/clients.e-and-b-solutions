@@ -1,18 +1,19 @@
-@import "../../styles/variables.scss";
-@import "../../styles/mixins.scss";
+@use "sass:color";
+@import "../../styles/variables";
+@import "../../styles/mixins";
 
 //Small screens - MOBILE
 @media only screen {
   .pricingContainer {
     display: grid;
     flex: 1 1 auto;
-    grid-gap: $MIDLARGE;
     grid-template-columns: 100%;
+    gap: $MIDLARGE;
     padding: $MIDLARGE $SMALL;
     background: radial-gradient(
       circle,
       $SEC_COLOR 0%,
-      darken($MAIN_COLOR, 20) 100%
+      color.adjust($MAIN_COLOR, $lightness: -20%) 100%
     );
     &__package {
       display: grid;

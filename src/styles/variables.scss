@@ -1,8 +1,10 @@
+@use "sass:color";
+
 // Colors
 $MAIN_COLOR: #690359;
 $MAIN_COLOR_INVERTED: #60a06a;
-$MAIN_COLOR_DARKEN: darken($MAIN_COLOR, 10);
-$MAIN_COLOR_LIGHTEN: lighten($MAIN_COLOR, 10);
+$MAIN_COLOR_DARKEN: color.adjust($MAIN_COLOR, $lightness: -10%);
+$MAIN_COLOR_LIGHTEN: color.adjust($MAIN_COLOR, $lightness: 10%);
 $SEC_COLOR: #690359;
 $GRAY_600: #1f2022;
 $GRAY_500: #3d3f42;
@@ -18,8 +20,11 @@ $FONT_GRAY: rgba(0, 0, 0, 0.7);
 $BORDER_GRAY: rgba(0, 0, 0, 0.5);
 $BOX_SHADOW_GRAY: rgba(189, 195, 199, 0.6);
 $BOX_SHADOW: 1px 2px $BOX_SHADOW_GRAY;
-$BOX_SHADOW_WIDGET: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-$BOX_SHADOW_WIDGET_DARKEN: 5px 0 3px rgba(0, 0, 0, 0.384),
+$BOX_SHADOW_WIDGET:
+  0 3px 6px rgba(0, 0, 0, 0.16),
+  0 3px 6px rgba(0, 0, 0, 0.23);
+$BOX_SHADOW_WIDGET_DARKEN:
+  5px 0 3px rgba(0, 0, 0, 0.384),
   0 15px 12px rgba(0, 0, 0, 0.521);
 
 // Spacing

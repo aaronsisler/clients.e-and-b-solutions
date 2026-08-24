@@ -11,13 +11,13 @@ const Input = ({ hasError, label, name, registerProp }) => (
       htmlFor={name}
       className={cn(
         styles.input__label,
-        hasError ? styles.input__labelError : ""
+        hasError ? styles.input__labelError : "",
       )}
     >
       <span
         className={cn(
           styles.input__span,
-          hasError ? styles.input__labelSpan : ""
+          hasError ? styles.input__labelSpan : "",
         )}
       >
         {label}
