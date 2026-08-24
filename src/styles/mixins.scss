@@ -1,5 +1,6 @@
 @use "sass:string";
-@import "./variables";
+@use "sass:color";
+@use "./variables" as *;
 
 @mixin font-type(
   $fontFamily: $MAIN_FONT,
@@ -15,7 +16,7 @@
 
 @function rgba-with-var($color, $alpha: 1) {
   @return string.unquote(
-    "rgba(#{red($color)}, #{green($color)}, #{blue($color)}, #{$alpha})"
+    "rgba(#{color.channel($color, "red", $space: rgb)}, #{color.channel($color, "green", $space: rgb)}, #{color.channel($color, "blue", $space: rgb)}, #{$alpha})"
   );
 }
 
