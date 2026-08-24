@@ -11,8 +11,6 @@
 .next/
 build/
 **/build/
-dist/
-**/dist/
 **/.terraform/
 
 # local files

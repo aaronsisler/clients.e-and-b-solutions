@@ -6,10 +6,10 @@
     "node": ">=24.0.0"
   },
   "scripts": {
-    "prebuild": "rm -rf ./build && rm -rf ./dist",
-    "build": "next build ./src && next export -o dist ./src",
+    "prebuild": "rm -rf ./build",
+    "build": "next build ./src",
     "dev": "next ./src",
-    "deploy": "aws s3 sync ./dist s3://$S3_BUCKET --delete",
+    "deploy": "aws s3 sync ./build s3://$S3_BUCKET --delete",
     "lint": "eslint \"./**/*.{js,jsx}\""
   },
   "dependencies": {
@@ -21,10 +21,10 @@
     "axios": "^0.21.4",
     "classnames": "^2.2.6",
     "email-validator": "^2.0.3",
-    "next": "^12.0.3",
+    "next": "^16.3.2",
     "prop-types": "^15.6.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
     "react-hook-form": "^7.20.2",
     "sass": "^1.43.4",
     "yup": "^0.32.11"

@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faExclamationCircle } from "@fortawesome/free-solid-svg-icons/faExclamationCircle";
+import { faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "./form-error.module.scss";
 
