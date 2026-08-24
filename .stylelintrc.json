@@ -23,7 +23,6 @@
     ],
     "rule-empty-line-before": "never",
     "block-no-empty": null,
-    "declaration-colon-newline-after": null,
     "order/order": [
       {
         "type": "at-rule",

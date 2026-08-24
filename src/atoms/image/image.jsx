@@ -13,7 +13,7 @@ const ImageAtom = ({ altText, className, src }) => (
 ImageAtom.propTypes = {
   altText: PropTypes.string.isRequired,
   className: PropTypes.string,
-  src: PropTypes.string.isRequired
+  src: PropTypes.string.isRequired,
 };
 
 export default ImageAtom;

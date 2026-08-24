@@ -1,14 +1,15 @@
-@import "../../styles/variables.scss";
-@import "../../styles/mixins.scss";
+@use "sass:color";
+@import "../../styles/variables";
+@import "../../styles/mixins";
 
 // Small screens - MOBILE
 @media only screen {
   .formError {
     @include font-type($MAIN_FONT, $MEDIUM);
 
-    color: lighten(darkred, 15);
+    color: color.adjust(darkred, $lightness: 15%);
     svg > path {
-      color: lighten(darkred, 15);
+      color: color.adjust(darkred, $lightness: 15%);
     }
   }
 }

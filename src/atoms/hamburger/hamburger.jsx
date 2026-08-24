@@ -18,7 +18,7 @@ const Hamburger = ({ isToggled, onClick }) => {
 
 Hamburger.propTypes = {
   isToggled: PropTypes.bool.isRequired,
-  onClick: PropTypes.func.isRequired
+  onClick: PropTypes.func.isRequired,
 };
 
 export default Hamburger;

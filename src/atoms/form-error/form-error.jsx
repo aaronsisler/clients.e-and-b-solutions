@@ -16,7 +16,7 @@ const FormError = ({ error }) => (
 );
 
 FormError.propTypes = {
-  error: PropTypes.string.isRequired
+  error: PropTypes.string.isRequired,
 };
 
 export default FormError;

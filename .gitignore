@@ -6,6 +6,8 @@
 
 # Development
 .claude/
+src/AGENTS.md
+src/CLAUDE.md
 
 # build/production folders
 .next/
