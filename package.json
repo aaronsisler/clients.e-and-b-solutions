@@ -9,7 +9,7 @@
     "prebuild": "rm -rf ./build",
     "build": "next build ./src",
     "dev": "next ./src",
-    "deploy": "aws s3 sync ./build s3://$S3_BUCKET --delete",
+    "deploy": "aws s3 sync ./build s3://$S3_BUCKET --delete && aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths \"/*\"",
     "lint": "eslint .",
     "lint:styles": "stylelint \"src/**/*.scss\"",
     "prepare": "husky"
