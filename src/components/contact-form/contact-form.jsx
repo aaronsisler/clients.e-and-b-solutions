@@ -4,7 +4,6 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
 import { CLIENT_NAME } from "../../config";
-import { HONEYPOT_INPUT_FIELD_NAMES } from "../../constants";
 import { sendEmail } from "../../utils";
 import FormError from "../../atoms/form-error";
 import Input from "../../atoms/input";
@@ -43,7 +42,6 @@ const ContactForm = () => {
     register,
     handleSubmit,
     watch,
-    getValues,
     formState: { errors },
   } = useForm(useFormOptions);
   const formLoadedAt = useRef(Date.now());
@@ -70,15 +68,6 @@ const ContactForm = () => {
       setIsSendButtonDisabled(false);
     };
 
-    const isBotSubmission = HONEYPOT_INPUT_FIELD_NAMES.some((fieldName) =>
-      Boolean(getValues(fieldName)),
-    );
-
-    if (isBotSubmission) {
-      done();
-      return;
-    }
-
     const formData = {
       elapsedFormTimeMs: Date.now() - formLoadedAt.current,
       emailAddress,
@@ -94,18 +83,6 @@ const ContactForm = () => {
   return (
     <form className={styles.contactForm} onSubmit={handleSubmit(onSubmit)}>
       <h1 className={styles.contactForm__title}>Send a message</h1>
-      <div className={styles.contactForm__honeypot} aria-hidden="true">
-        {HONEYPOT_INPUT_FIELD_NAMES.map((fieldName) => (
-          <input
-            key={fieldName}
-            autoComplete="off"
-            name={fieldName}
-            tabIndex="-1"
-            type="text"
-            {...register(fieldName)}
-          />
-        ))}
-      </div>
       <Input
         hasError={Boolean(errors?.name)}
         label="Name"
